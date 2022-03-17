@@ -27,10 +27,12 @@ function Banner() {
            <h3>original de liteflix</h3>
             <h1 className= 'banner_title'>{movie?.title}</h1>
         </div> 
+
         <div className= 'banner_buttons'>  
             <button className='banner_button' >Reproducir</button>
             <button className='banner_button' >Mi lista</button>
         </div> 
+        <div className= 'banner_gradient_bottom'></div>
         {/* arriba de title */}
         {/* title */}
          {/* 2 buttons */}
