@@ -1,0 +1,44 @@
+import React, { useEffect, useState} from 'react';
+import axios from 'axios';
+import apiRequests from './apiRequests';
+import './Banner.css';
+
+function Banner() {
+    const[movie, setMovie] = useState([]);
+        const baseURL = `https://image.tmdb.org/t/p/w500`; 
+    useEffect(() => {   
+        async function fetchData() {
+            const request = await axios.get(apiRequests.fetchFeatMovie);
+            console.log('request.data', request.data.results[0]);
+            setMovie(request.data.results[0]);
+            return request
+        }
+        fetchData();
+    }, []);
+// console.log(`url(${baseURL}${movie.backdrop_path})`);
+  return (
+      
+    <header className= 'banner'
+      style={{ backgroundImage: `url(${baseURL}${movie?.backdrop_path})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center'}} 
+    >
+        <div className= 'banner_content'>  
+           <h3>original de liteflix</h3>
+            <h1 className= 'banner_title'>{movie?.title}</h1>
+        </div> 
+        <div className= 'banner_buttons'>  
+            <button className='banner_button' >Reproducir</button>
+            <button className='banner_button' >Mi lista</button>
+        </div> 
+        {/* arriba de title */}
+        {/* title */}
+         {/* 2 buttons */}
+
+
+
+    </header>
+  );
+}
+
+export default Banner;

@@ -1,0 +1,39 @@
+.banner {
+  color: white;
+  object-fit: contain;
+  height: 448px;
+}
+.banner_content {
+  margin-left: 20px;
+  height: 200px;
+  padding-top: 20px;
+}
+
+.banner_title {
+  font-size: 2.5em;
+  font-weight: bold;
+  padding-bottom: 0.4rem;
+  max-width: fit-content;
+}
+
+.banner_button {
+  /* {elegant button} */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.2em;
+
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner_button:hover {
+  color: black;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+/* banner button main */
+/* banner button option */
