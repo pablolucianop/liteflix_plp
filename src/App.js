@@ -13,7 +13,6 @@ function App() {
       <NavBar/>
       {/* {banner} */}
       <Banner fetchUrl={apiRequests.fetchFeatMovie} />
-      <h2>Esta es la fundaci'on m'itica de bs as</h2>
       <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} />
       {/* <Col title='popular' /> */}
     </div>

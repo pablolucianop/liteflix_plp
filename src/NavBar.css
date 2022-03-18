@@ -1,4 +1,26 @@
 .navBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 100;
+  padding: 15px;
+}
+.navbar_logo {
+  object-fit: contain;
+  width: 113px;
+}
+.hamburger {
+  object-fit: contain;
+  width: 27px;
+}
+.notification {
+  object-fit: contain;
+  width: 23.4px;
+}
+.avatar {
+  object-fit: contain;
+  width: 42px;
+  object-fit: cover;
+  border-radius: 50%;
 }

@@ -1,19 +1,43 @@
 import React from "react";
 import './NavBar.css';
+import logo from './img/logo.svg';
+import avatar from './img/avatar.jpg';
+import notification from './img/notification.svg';
+import hamburger from './img/hamburger.svg';
+import plusHvyTrans from './img/plusHvyTrans.svg';
 
 function NavBar(){
     return(
         <div className="navBar">
             <img 
                 className="navbar_logo" 
-                src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png" 
+                src={logo} 
                 alt="logo">
             </img>
-
-            <img className='avatar' 
-                src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Wikimedia_Community_Logo%2C_phabricator_Avatar_version.svg" 
+            <div className='addMovie'>
+                <img 
+                    className="plusHvyTrans" 
+                    src={plusHvyTrans} 
+                    alt="Agregar película">
+                </img>
+                agregar película
+            </div>
+            <img 
+                className="hamburger" 
+                src={hamburger} 
+                alt="menu">
+            </img>
+           <img 
+                className="notification" 
+                src={notification} 
+                alt="notification">
+            </img>
+           <img 
+                className="avatar" 
+                src={avatar} 
                 alt="avatar">
             </img>
+
         </div>
                 
     )

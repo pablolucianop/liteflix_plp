@@ -2,6 +2,8 @@ import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 import apiRequests from './apiRequests';
 import './Banner.css';
+import play from './img/play.svg';
+import plus from './img/plus.svg';
 
 function Banner() {
     const[movie, setMovie] = useState([]);
@@ -29,8 +31,23 @@ function Banner() {
         </div> 
 
         <div className= 'banner_buttons'>  
-            <button className='banner_button' >Reproducir</button>
-            <button className='banner_button' >Mi lista</button>
+            <button className='banner_button' >
+           <img 
+                className="play" 
+                src={play} 
+                alt="play">
+            </img>
+              Reproducir
+
+            </button>
+            <button className='banner_button' >
+              <img 
+                className="plus" 
+                src={plus} 
+                alt="agregar película">
+              </img>
+              Mi lista
+            </button>
         </div> 
         <div className= 'banner_gradient_bottom'></div>
         {/* arriba de title */}
