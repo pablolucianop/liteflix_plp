@@ -1,20 +1,27 @@
 .navBar {
-  width: 100%;
+  width: 100rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
   top: 100;
   padding: 15px;
-  background-color: #000;
+  max-width: 1119px;
 }
 .navbar_logo {
   object-fit: contain;
   width: 113px;
+  margin-left: 184px;
+  margin-right: 64px;
 }
 .hamburger {
   object-fit: contain;
   width: 27px;
+}
+.plusHvyTrans {
+  object-fit: contain;
+  width: 14px;
+  margin-right: 12px;
 }
 .notification {
   object-fit: contain;
@@ -35,4 +42,8 @@
 .navbar_right {
   display: flex;
   justify-content: space-between;
+}
+
+.hamburgerRightMargin {
+  transform: scaleX(-1);
 }

@@ -1,51 +1,81 @@
 import React from "react";
 import './NavBar.css';
-import logo from './img/logo.svg';
-import avatar from './img/avatar.jpg';
-import notification from './img/notification.svg';
-import hamburger from './img/hamburger.svg';
-import plusHvyTrans from './img/plusHvyTrans.svg';
+import logoImg from './img/logo.svg';
+import avatarImg from './img/avatar.jpg';
+import notificationImg from './img/notification.svg';
+import hamburgerImg from './img/hamburger.svg';
+import plusHvyTransImg from './img/plusHvyTrans.svg';
 
 function NavBar(){
-    return(
-        <div className="navBar">
-        <div className="navbar_left">
+    let desktop= true
+    const logo=
             <img 
                 className="navbar_logo" 
-                src={logo} 
+                src={logoImg} 
                 alt="logo">
             </img>
+   const addMovie=
             <div className='addMovie'>
                 <img 
                     className="plusHvyTrans" 
-                    src={plusHvyTrans} 
+                    src={plusHvyTransImg} 
                     alt="Agregar película">
                 </img>
                 agregar película
             </div>
-        </div>
-        <div className="navbar_right">
-            <img 
-                className="hamburger" 
-                src={hamburger} 
-                alt="menu">
-            </img>
-           <img 
-                className="notification" 
-                src={notification} 
-                alt="notification">
-            </img>
+   const avatar=
            <img 
                 className="avatar" 
-                src={avatar} 
+                src={avatarImg} 
                 alt="avatar">
             </img>
+
+   const notification=
+              <img 
+                className="notification" 
+                src={notificationImg} 
+                alt="notification">
+            </img>
+
+    const hamburger=
+            <img 
+                className="hamburger" 
+                src={hamburgerImg} 
+                alt="menu">
+            </img>
+
+    const hamburgerRightMargin=
+            <img 
+                className="hamburgerRightMargin" 
+                src={hamburgerImg} 
+                alt="menu">
+            </img>
+const mobileNav=(
+        <div className='navBar'>
+            {hamburgerRightMargin}
+            {logo}
+            {avatar}
         </div>
-
-
-
-
+)
+const desktopNav=(
+        <div className='navBar' >
+            <div className="navbar_left">
+                {logo}
+                {addMovie}
+            </div>
+            <div className="navbar_right">
+                {hamburger}
+                {notification}
+                {avatar}
+            </div>
         </div>
+)
+
+    return(
+    <div >
+        {desktop ? desktopNav : mobileNav}
+    </div>
+
                 
     )
 }
