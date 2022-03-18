@@ -9,6 +9,7 @@ import plusHvyTrans from './img/plusHvyTrans.svg';
 function NavBar(){
     return(
         <div className="navBar">
+        <div className="navbar_left">
             <img 
                 className="navbar_logo" 
                 src={logo} 
@@ -22,6 +23,8 @@ function NavBar(){
                 </img>
                 agregar película
             </div>
+        </div>
+        <div className="navbar_right">
             <img 
                 className="hamburger" 
                 src={hamburger} 
@@ -37,6 +40,10 @@ function NavBar(){
                 src={avatar} 
                 alt="avatar">
             </img>
+        </div>
+
+
+
 
         </div>
                 

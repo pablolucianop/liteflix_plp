@@ -2,9 +2,11 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 100;
   padding: 15px;
+  background-color: #000;
 }
 .navbar_logo {
   object-fit: contain;
@@ -23,4 +25,14 @@
   width: 42px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.navbar_left {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar_right {
+  display: flex;
+  justify-content: space-between;
 }
