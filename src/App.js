@@ -16,7 +16,7 @@ function App() {
       <Banner fetchUrl={apiRequests.fetchFeatMovie} />
       <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} />
       {/* <Col title='popular' /> */}
-      <UploadFile />
+      {/* <UploadFile /> */}
     </div>
   );
 }

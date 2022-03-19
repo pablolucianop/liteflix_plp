@@ -27,8 +27,8 @@ function Banner() {
       backgroundPosition: 'center center'}} 
     >
         <div className= 'banner_content'>  
-           <h3>original de liteflix</h3>
-            <h1 className= 'banner_title'>{movie?.title}</h1>
+           <p>original de <b>liteflix</b></p>
+            <b className= 'banner_title'>{movie?.title}</b>
         </div> 
 
         <div className= 'banner_buttons'>  
