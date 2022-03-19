@@ -3,10 +3,13 @@
   object-fit: contain;
   height: 448px;
 }
+
 .banner_content {
-  margin-left: 20px;
-  height: 200px;
-  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* justify-content: center; */
 }
 
 .banner_title {
@@ -14,14 +17,18 @@
   font-weight: bold;
   padding-bottom: 0.4rem;
   max-width: fit-content;
+  color: #64eebc;
+}
+
+.banner_button {
+  display: flex;
 }
 
 .banner_button {
   /* {elegant button} */
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #242424;
   color: white;
   font-size: 1.2em;
-
   padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
@@ -30,13 +37,18 @@
   margin-bottom: 0.5rem;
 }
 
-.banner_button:hover {
+.plus {
+  padding-right: 0.5em;
+  height: 0.7em;
+}
+
+/* .banner_button:hover {
   color: black;
   background-color: white;
   transition: all 0.3s ease-in-out;
-}
+} */
 
-.banner_gradient_bottom {
+/* .banner_gradient_bottom {
   height: 11rem;
   background: rgb(36, 36, 36);
   background: linear-gradient(
@@ -45,6 +57,6 @@
     rgba(36, 36, 36, 0) 68%,
     rgba(36, 36, 36, 1) 242424%
   );
-}
+} */
 /* banner button main */
 /* banner button option */
