@@ -37,12 +37,13 @@ function Col({ title, fetchUrl }) {
                     >
                         {/* <img src={`${baseURL}${movie.backdrop_path}`} alt={movie.title}></img> */}
                         <div className='col_movie_data'>
+                            <img 
+                                className="playCircle" 
+                                src={playCircle} 
+                                alt="reproducir película">
+                            </img>
                             <h3>{movie.title}</h3>
-                                <img 
-                                    className="playCircle" 
-                                    src={playCircle} 
-                                    alt="reproducir película">
-                                </img>
+
                            <div className="average">
                                 <img 
                                     className="star" 

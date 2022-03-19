@@ -4,6 +4,7 @@ import Col from './Col';
 import apiRequests from './apiRequests';
 import Banner from './Banner';
 import NavBar from './NavBar';
+import UploadFile from './UploadFile';
 import './App.css';
 
 
@@ -15,6 +16,7 @@ function App() {
       <Banner fetchUrl={apiRequests.fetchFeatMovie} />
       <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} />
       {/* <Col title='popular' /> */}
+      <UploadFile />
     </div>
   );
 }

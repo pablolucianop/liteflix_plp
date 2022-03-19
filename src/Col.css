@@ -13,8 +13,10 @@
 .col_movies::-webkit-scrollbar {
   display: none;
 }
-
+/* //mobile */
 .col_movie {
+  width: 220px;
+  height: 145px;
   margin-bottom: 10px;
   width: 30%;
   background-repeat: no-repeat;

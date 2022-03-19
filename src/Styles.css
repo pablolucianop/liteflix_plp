@@ -1,0 +1,12 @@
+.fileUploader {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+}
+label {
+  width: 350px;
+  box-sizing: border-box;
+}
