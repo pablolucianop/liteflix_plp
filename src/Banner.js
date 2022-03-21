@@ -5,19 +5,10 @@ import './Banner.css';
 import play from './img/play.svg';
 import plus from './img/plus.svg';
 
-function Banner() {
-    const[movie, setMovie] = useState([]);
-        const baseURL = `https://image.tmdb.org/t/p/w500`; 
-    useEffect(() => {   
-        async function fetchData() {
-            const request = await axios.get(apiRequests.fetchFeatMovie);
-            console.log('request.data', request.data.results[0]);
-            setMovie(request.data.results[0]);
-            return request
-        }
-        fetchData();
-    }, []);
-// console.log(`url(${baseURL}${movie.backdrop_path})`);
+function Banner({movie}) {
+    const baseURL = `https://image.tmdb.org/t/p/w500/`;
+
+
   return (
     <header className= 'banner'
       style={{ backgroundImage: `url(${baseURL}${movie?.backdrop_path})`,

@@ -16,7 +16,7 @@ function App() {
     const [popMovies, setMovies] = useState([]);
     const [featMovie, setFeatMovie] = useState([]);
     const popularMoviesToShow = 4;
-    const baseURL = `https://image.tmdb.org/t/p/w500/`; //https://image.tmdb.org/t/p/w500/
+    const baseURL = `https://image.tmdb.org/t/p/w500/`; 
 
     useEffect(() => {
 
@@ -24,7 +24,7 @@ function App() {
             console.log('fetchUrl', apiRequests.fetchPopMovies);
             const request = await axios.get(apiRequests.fetchPopMovies);
             setMovies(request.data.results);
-            const request2 = await axios.get(apiRequests.fetchPopMovies);
+            const request2 = await axios.get(apiRequests.fetchFeatMovie);
             setFeatMovie(request2.data.results);
 
             return request
@@ -33,13 +33,14 @@ function App() {
 
     }, []);
 console.log('popMovies', popMovies);
+console.log('featMovie', featMovie);
 
 
   return (
     <div className="app">
       <NavBar/>
       <Sidebar />
-      <Banner fetchUrl={apiRequests.fetchFeatMovie} />
+      <Banner fetchUrl={apiRequests.fetchFeatMovie} movie ={featMovie[0]} />
       {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
       {console.log('info', info)}
       <Col2 title='populares' movies={popMovies} />
