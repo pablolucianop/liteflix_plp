@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './App.css';
 import Col from './Col';
-import Col2 from './Col2';
 import apiRequests from './apiRequests';
 import Banner from './Banner';
 import NavBar from './NavBar';
@@ -43,7 +42,8 @@ console.log('featMovie', featMovie);
       <Banner fetchUrl={apiRequests.fetchFeatMovie} movie ={featMovie[0]} />
       {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
       {console.log('info', info)}
-      <Col2 title='populares' movies={popMovies} />
+      <Col title='populares' movies={popMovies} />
+      <Col title='mi lista' movies={info} />
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       {/* <UploadFile /> */}
     </div>

@@ -4,22 +4,13 @@ import './Col.css';
 import playCircle from './img/playCircle.svg';
 import star from './img/star.svg';
 
-function Col({ title, fetchUrl }) {
-    const [movies, setMovies] = useState([]);
+function Col({ title, movies }) {
+
     const popularMoviesToShow = 4;
     const baseURL = `https://image.tmdb.org/t/p/w500/`; //https://image.tmdb.org/t/p/w500/
 
 
-    useEffect(() => {
-        async function fetchData() {
-            console.log('fetchUrl', fetchUrl);
-            const request = await axios.get(fetchUrl);
-            setMovies(request.data.results);
-            return request
-        }
-        fetchData()
 
-    }, [fetchUrl]);
     console.log('movies', movies);
     return(
         <div className='col'>
