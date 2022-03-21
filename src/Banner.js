@@ -1,6 +1,4 @@
-import React, { useEffect, useState} from 'react';
-import axios from 'axios';
-import apiRequests from './apiRequests';
+import React from 'react';
 import './Banner.css';
 import play from './img/play.svg';
 import plus from './img/plus.svg';

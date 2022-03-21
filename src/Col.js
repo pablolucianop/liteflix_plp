@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import React from 'react';
 import './Col.css';
 import playCircle from './img/playCircle.svg';
 import star from './img/star.svg';
