@@ -15,12 +15,6 @@ function Col({ title, fetchUrl }) {
             console.log('fetchUrl', fetchUrl);
             const request = await axios.get(fetchUrl);
             setMovies(request.data.results);
-
-            // console.log(request.data.results[0]);
-            //backdrop_path
-            //title
-            //vote_average
-            //original o no?
             return request
         }
         fetchData()
@@ -43,16 +37,24 @@ function Col({ title, fetchUrl }) {
                                 alt="reproducir película">
                             </img>
                             <h3>{movie.title}</h3>
-
-                           <div className="average">
-                                <img 
-                                    className="star" 
-                                    src={star} 
-                                    alt="star">
-                                </img>
-                                <p>{movie.vote_average}</p>
-                           </div>
+                            {
+                            movie.vote_average ?
+                                <div className="average">
+                                    <img 
+                                        className="star" 
+                                        src={star} 
+                                        alt="star">
+                                    </img>
+                                    <p>{movie.vote_average}</p>
+                                 </div>
+                                 : ''
+                           }
+                           {
+                            movie.release_date ?
                             <p>{movie.release_date.slice(0,4)}</p>
+                            : ''
+                           }
+                            
                         </div>
                     </div>
                 ))}
@@ -62,3 +64,4 @@ function Col({ title, fetchUrl }) {
 }
 
 export default Col;
+
