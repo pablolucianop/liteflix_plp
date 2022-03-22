@@ -21,7 +21,7 @@
   font-weight: bold;
   padding-bottom: 0.4rem;
   max-width: fit-content;
-  color: #64eebc;
+  /* color: #64eebc; */
 }
 
 .banner_button {
@@ -53,7 +53,7 @@
 } */
 
 .banner_gradient_bottom {
-  border: 2px solid rgb(71, 111, 255);
+  /* border: 2px solid rgb(71, 111, 255); */
   height: 100%;
   width: 100%;
   background: #242424;

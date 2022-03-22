@@ -22,5 +22,5 @@ body {
 
 .sidebarItem:hover {
   cursor: pointer;
-  background-color: darkslategray;
+  /* background-color: darkslategray; */
 }
