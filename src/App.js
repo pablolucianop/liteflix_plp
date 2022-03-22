@@ -7,8 +7,8 @@ import Banner from './Banner';
 import NavBar from './NavBar';
 import Sidebar from './Sidebar';
 import {info} from './info'
-import UploadFile from './UploadFile';
 import './App.css';
+import Upload from './Upload';
 
 
 function App() {
@@ -45,7 +45,7 @@ console.log('featMovie', featMovie);
       <Col title='populares' movies={popMovies} />
       <Col title='mi lista' movies={info} />
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
-      {/* <UploadFile /> */}
+      <Upload />
     </div>
   );
 }
