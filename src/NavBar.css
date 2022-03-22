@@ -6,13 +6,17 @@
   position: absolute;
   top: 0;
   padding: 1em;
-  /* max-width: 1119px; */
+  max-width: 87.3%;
+  background-color: turquoise;
+  min-height: 36px;
 }
 .navbar_logo {
   object-fit: contain;
   width: 113px;
-  margin-left: 184px;
+  margin-left: 84px;
   margin-right: 64px;
+  max-width: 98px;
+  min-width: 113px;
 }
 .hamburger {
   object-fit: contain;
@@ -29,7 +33,9 @@
 }
 .avatar {
   object-fit: contain;
-  width: 42px;
+  width: 9.6vw;
+  max-width: 40px;
+  min-width: 36px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -44,6 +50,8 @@
   justify-content: space-between;
 }
 
-.hamburgerRightMargin {
-  transform: scaleX(-1);
+@media screen and (max-width: 600px) {
+  .hamburgerRightMargin {
+    transform: scaleX(-1);
+  }
 }

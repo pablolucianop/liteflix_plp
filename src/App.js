@@ -41,10 +41,13 @@ console.log('addedMovies', addedMovies);
   return (
     <div className="app">
      < div className="content">
+
+        <NavBar/>
+
       <Banner fetchUrl={apiRequests.fetchFeatMovie} movie ={featMovie[0]} />
       <Col title='populares' movies={popMovies} />
      </div>
-      <NavBar/>
+
       {/* <Sidebar /> */}
 
       {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}

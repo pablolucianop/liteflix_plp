@@ -72,12 +72,13 @@ const desktopNav=(
 )
 
     return(
-    <div >
+    <div className="container" >
         {desktop ? desktopNav : mobileNav}
     </div>
 
                 
     )
 }
+
 
 export default NavBar;

@@ -14,30 +14,31 @@ function Banner({movie}) {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center'}} 
     >
-      <div className= 'banner_content'>  
-        <p>original de <b>liteflix</b></p>
-        <b className= 'banner_title'>{movie?.title}</b>
-          <div className= 'banner_buttons'>  
-              <button className='banner_button' >
-            <img 
-                  className="play" 
-                  src={play} 
-                  alt="play">
-              </img>
-                Reproducir
-              </button>
-              <button className='banner_button' >
-                <img 
-                  className="plus" 
-                  src={plus} 
-                  alt="agregar película">
+      <div className= 'container'> 
+        <div className= 'banner_content'>  
+          <p>original de <b>liteflix</b></p>
+          <b className= 'banner_title'>{movie?.title}</b>
+            <div className= 'banner_buttons'>  
+                <button className='banner_button' >
+              <img 
+                    className="play" 
+                    src={play} 
+                    alt="play">
                 </img>
-                Mi lista
-              </button>
-          </div> 
-      </div> 
-      
-    </header>
+                  Reproducir
+                </button>
+                <button className='banner_button' >
+                  <img 
+                    className="plus" 
+                    src={plus} 
+                    alt="agregar película">
+                  </img>
+                  Mi lista
+                </button>
+            </div> 
+        </div> 
+    </div>
+  </header>
   );
 }
 

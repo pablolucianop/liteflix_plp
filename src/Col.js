@@ -10,40 +10,42 @@ function Col({ title, movies }) {
   
     return(
         <div className='col'>
-            <h2>{title}</h2>
-             <div className='col_movies'>
-                {movies.slice(0,popularMoviesToShow).map(movie => (
+            <div className= 'container'> 
+                <h2>{title}</h2>
+                <div className='col_movies'>
+                    {movies.slice(0,popularMoviesToShow).map(movie => (
 
-                    <div className='col_movie' key={movie.id} 
-                    
-                        style={{ backgroundImage: title=== 'mi lista' ? `url(${movie.backdrop_path})` : `url(${baseURL}${movie.backdrop_path})`}} 
-                    >
-                        <div className='col_movie_data'>
-                            <img 
-                                className="playCircle" 
-                                src={playCircle} 
-                                alt="reproducir película">
-                            </img>
-                            <h3>{movie.title}</h3>
+                        <div className='col_movie' key={movie.id} 
+                        
+                            style={{ backgroundImage: title=== 'mi lista' ? `url(${movie.backdrop_path})` : `url(${baseURL}${movie.backdrop_path})`}} 
+                        >
+                            <div className='col_movie_data'>
+                                <img 
+                                    className="playCircle" 
+                                    src={playCircle} 
+                                    alt="reproducir película">
+                                </img>
+                                <h3>{movie.title}</h3>
+                                {
+                                movie.vote_average &&
+                                    <div className="average">
+                                        <img 
+                                            className="star" 
+                                            src={star} 
+                                            alt="star">
+                                        </img>
+                                        <p>{movie.vote_average}</p>
+                                    </div>
+                            }
                             {
-                            movie.vote_average &&
-                                <div className="average">
-                                    <img 
-                                        className="star" 
-                                        src={star} 
-                                        alt="star">
-                                    </img>
-                                    <p>{movie.vote_average}</p>
-                                 </div>
-                           }
-                           {
-                            movie.release_date && <p>{movie.release_date.slice(0,4)}</p>
-                           }
-                            
+                                movie.release_date && <p>{movie.release_date.slice(0,4)}</p>
+                            }
+                                
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
+           </div>     
         </div>
     )
 }

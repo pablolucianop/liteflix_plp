@@ -1,10 +1,60 @@
-* {
+:root {
+  --minmumMovile: 600px;
+  --colorAccent: #64eebc;
+  --colorBase: #ffffff;
+  --colorDark: #242424;
+  --ff-primary: 'Bebas Neue', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  /* line-height: 1.125rem; */
+
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+body,
+h1,
+h2,
+h3,
+p {
   margin: 0;
 }
 
-:root {
-  --minmumMovile: 600px;
-  --color2: blue;
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  line-height: 1.125rem;
+  margin-bottom: 1em;
+}
+header {
+  padding: 3rem 0;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90% - 2rem);
+}
+
+.bg {
+  background-color: var(--colorDark);
 }
 
 @font-face {
@@ -29,15 +79,6 @@ b {
 }
 .light {
   font-family: -apple-system, BebasNeue-Thin;
-}
-body {
-  margin: 0;
-  letter-spacing: 0.25em;
-  font-family: -apple-system, BebasNeue-Regular, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
