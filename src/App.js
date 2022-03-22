@@ -44,7 +44,7 @@ console.log('addedMovies', addedMovies);
       {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
       {console.log('info', info)}
       <Col title='populares' movies={popMovies} />
-      <Col title='mi lista' movies={info} />
+      <Col title='mi lista' movies={addedMovies} />
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} />
     </div>
