@@ -6,6 +6,8 @@ import apiRequests from './apiRequests';
 import Banner from './Banner';
 import NavBar from './NavBar';
 import Sidebar from './Sidebar';
+import ColOptions from './ColOptions';
+
 import {info} from './info'
 import './App.css';
 import Upload from './Upload';
@@ -47,6 +49,7 @@ console.log('addedMovies', addedMovies);
       <Col title='mi lista' movies={addedMovies} />
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} />
+      <colOptions />
     </div>
   );
 }

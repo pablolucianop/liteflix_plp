@@ -1,20 +1,20 @@
 import React from 'react';
 import './Sidebar.css';
-import {SidebarData} from './SidebarData'
 import plusHvyTransImg from './img/plusHvyTrans.svg';
 
-function Sidebar() {
+function colOptions() {
+    const  SidebarOptionsArr = ['populares', 'mis películas'];
     return (
         <div className="sidebar">
             <ul className="sidebarList"> 
-                {SidebarData.map((val, key) => {
+                {SidebarOptionsArr.map((val, key) => {
                     return(
                         // {nav.var}
                         <li className="sidebarItem light" key={key} onClick={()=>{window.location.pathname = val.link}}>
                          {
-                         val.icon && <img className="sidebarItemIcon" src={plusHvyTransImg} alt="Agregar película"/>  
+                         val.icon        && <img className="sidebarItemIcon" src={plusHvyTransImg} alt="Agregar película"/>    
                          }
-                         {val.title}
+                            {val.title}
                         </li>
                     )
                 })}
@@ -23,4 +23,4 @@ function Sidebar() {
     )     
 }
 
-export default Sidebar;
+export default colOptions;

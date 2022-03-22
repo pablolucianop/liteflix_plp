@@ -29,7 +29,7 @@ function Col2({ title, movies }) {
                             </img>
                             <h3>{movie.title}</h3>
                             {
-                            movie.vote_average ?
+                            movie.vote_average &&
                                 <div className="average">
                                     <img 
                                         className="star" 
@@ -38,12 +38,10 @@ function Col2({ title, movies }) {
                                     </img>
                                     <p>{movie.vote_average}</p>
                                  </div>
-                                 : ''
                            }
                            {
-                            movie.release_date ?
+                            movie.release_date  &&
                             <p>{movie.release_date.slice(0,4)}</p>
-                            : ''
                            }
                             
                         </div>

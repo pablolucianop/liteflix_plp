@@ -16,10 +16,8 @@ function Upload({setaddedMovies, xxy}) {
     }
     setUploadedMovies([...uploadedMovies, actual]);
     setaddedMovies([...xxy, actual]);
-    alert(`The name you entered was: ${name}`);
     console.log('uploadedMovies',actual)
     console.log('uploadedMovies',uploadedMovies)
-
   }
 
     const {getRootProps, getInputProps, isDragActive} = useDropzone({
@@ -52,7 +50,6 @@ function Upload({setaddedMovies, xxy}) {
       </label>
 
     </form>
-
         <div className='dropzone' {...getRootProps()}>
             <input {...getInputProps()} />
             {
