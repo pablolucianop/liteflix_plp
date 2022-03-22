@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useDropzone} from 'react-dropzone';
 // import '/Upload.css'
 
-function Upload() {
+function Upload({setaddedMovies, xxy}) {
     const [name, setName] = useState("");
     const [files, setFiles] = useState([]);
     const [uploadedMovies, setUploadedMovies] = useState([]);
@@ -14,6 +14,7 @@ function Upload() {
         backdrop_path: files[0].preview
     }
     setUploadedMovies([...uploadedMovies, actual]);
+    setaddedMovies([...xxy, actual]);
     alert(`The name you entered was: ${name}`);
     console.log('uploadedMovies',actual)
     console.log('uploadedMovies',uploadedMovies)
@@ -68,12 +69,12 @@ function Upload() {
         </div> 
         
         <div className='previews'>
-            {files.map(file => (
+            {/* {files.map(file => (
                 <div className='preview' key={file.name}>
                     <img src={file.preview} />
                     <button>X</button>
                 </div>
-            ))}
+            ))} */}
         </div>
     </div> 
 

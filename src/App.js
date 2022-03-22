@@ -14,6 +14,7 @@ import Upload from './Upload';
 function App() {
     const [popMovies, setMovies] = useState([]);
     const [featMovie, setFeatMovie] = useState([]);
+    const [addedMovies, setaddedMovies] = useState([]);
     const popularMoviesToShow = 4;
     const baseURL = `https://image.tmdb.org/t/p/w500/`; 
 
@@ -33,7 +34,7 @@ function App() {
     }, []);
 console.log('popMovies', popMovies);
 console.log('featMovie', featMovie);
-
+console.log('addedMovies', addedMovies);
 
   return (
     <div className="app">
@@ -45,7 +46,7 @@ console.log('featMovie', featMovie);
       <Col title='populares' movies={popMovies} />
       <Col title='mi lista' movies={info} />
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
-      <Upload />
+      <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} />
     </div>
   );
 }
