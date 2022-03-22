@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+:root {
+  --minmumMovile: 600px;
+  --color2: blue;
+}
+
 @font-face {
   font-family: 'BebasNeue-Thin';
   src: local('BebasNeue'), url(./fonts/BebasNeue-Thin.ttf) format('truetype');

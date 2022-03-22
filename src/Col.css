@@ -1,12 +1,28 @@
 .col {
   /* margin: 20px; */
   color: #ffffff;
+  /* color: var(--color2); */
   background-color: firebrick;
   /* width: 200px; */
   /* min-width: 200px; */
   padding-top: 5em;
   position: absolute;
   top: 10px;
+}
+.col_movie {
+  /* width: 220px; */
+  /* height: 145px; */
+  margin-bottom: 10px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-size: auto; */
+  border-radius: 5px;
+  transition: transform 500ms;
+  background-color: rgb(47, 47, 47);
+  /* max-width: 327px; */
+  text-align: center;
 }
 @media screen and (max-width: 600px) {
   .col {

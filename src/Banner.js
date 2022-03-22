@@ -12,9 +12,8 @@ function Banner({movie}) {
       style={{ backgroundImage: `url(${baseURL}${movie?.backdrop_path})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center center'}} 
+      backgroundPosition: 'center'}} 
     >
-      <h2>banner</h2>
       <div className= 'banner_content'>  
         <p>original de <b>liteflix</b></p>
         <b className= 'banner_title'>{movie?.title}</b>

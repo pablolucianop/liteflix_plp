@@ -39,7 +39,6 @@ function Col({ title, movies }) {
                                     </img>
                                     <p>{movie.vote_average}</p>
                                  </div>
-                                 
                            }
                            {
                             movie.release_date && <p>{movie.release_date.slice(0,4)}</p>
