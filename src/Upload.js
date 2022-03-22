@@ -11,7 +11,8 @@ function Upload({setaddedMovies, xxy}) {
     event.preventDefault();
     let actual= {
         title: name,
-        backdrop_path: files[0].preview
+        backdrop_path: files[0].preview,
+        key: 'uploaded' + uploadedMovies.length
     }
     setUploadedMovies([...uploadedMovies, actual]);
     setaddedMovies([...xxy, actual]);
@@ -69,12 +70,12 @@ function Upload({setaddedMovies, xxy}) {
         </div> 
         
         <div className='previews'>
-            {/* {files.map(file => (
+            {files.map(file => (
                 <div className='preview' key={file.name}>
-                    <img src={file.preview} />
+                    <img src={file.preview} alt='{preview}' />
                     <button>X</button>
                 </div>
-            ))} */}
+            ))}
         </div>
     </div> 
 
