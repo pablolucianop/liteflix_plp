@@ -3,7 +3,14 @@ import {useDropzone} from 'react-dropzone';
 // import '/Upload.css'
 
 function Upload() {
+    const [name, setName] = useState("");
     const [files, setFiles] = useState([]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`The name you entered was: ${name}`);
+  }
+
     const {getRootProps, getInputProps, isDragActive} = useDropzone({
         accept: 'image/*',
         onDrop: acceptedFiles => {
@@ -22,15 +29,36 @@ function Upload() {
     ));
  return (
     <div className ='Upload' > 
-        <h1>Agregar película</h1>
+    <h1>Agregá un archivo</h1>
+    <form onSubmit={handleSubmit}>
+      <label>
+        <input 
+          type="text" 
+          value={name}
+          placeholder="Título"
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+
+    </form>
+
         <div className='dropzone' {...getRootProps()}>
             <input {...getInputProps()} />
             {
-                isDragActive ?
-                <p>Arrastra las imágenes aquí</p> :
-                <p>Arrastra las imágenes aquí o haz click para seleccionar</p>
+                // isDragActive ?
+                <p>Agregá un archivo</p> 
+                // :
+                // <p>Arrastra las imágenes aquí o haz click para seleccionar</p>
             }           
         </div> 
+
+        <div className='subirPelicula'>
+     subir Película
+        </div> 
+        <div className='salir'>
+          salir
+        </div> 
+        
         <div className='previews'>
             {files.map(file => (
                 <div className='preview' key={file.name}>
