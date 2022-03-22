@@ -15,14 +15,13 @@ function Col({ title, movies }) {
     return(
         <div className='col'>
             <h2>{title}</h2>
-            <div className='col_movies'>
+             <div className='col_movies'>
                 {movies.slice(0,popularMoviesToShow).map(movie => (
 
                     <div className='col_movie' key={movie.id} 
                     
                         style={{ backgroundImage: title=== 'mi lista' ? `url(${movie.backdrop_path})` : `url(${baseURL}${movie.backdrop_path})`}} 
                     >
-                        {/* <img src={`${baseURL}${movie.backdrop_path}`} alt={movie.title}></img> */}
                         <div className='col_movie_data'>
                             <img 
                                 className="playCircle" 

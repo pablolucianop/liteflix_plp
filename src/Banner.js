@@ -14,7 +14,7 @@ function Banner({movie}) {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center center'}} 
     >
-      {/* <div className= 'banner_gradient_bottom'></div> */}
+      <h2>banner</h2>
       <div className= 'banner_content'>  
         <p>original de <b>liteflix</b></p>
         <b className= 'banner_title'>{movie?.title}</b>

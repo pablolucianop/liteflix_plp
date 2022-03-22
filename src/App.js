@@ -40,16 +40,20 @@ console.log('addedMovies', addedMovies);
 
   return (
     <div className="app">
-      <NavBar/>
-      <Sidebar />
+     < div className="content">
       <Banner fetchUrl={apiRequests.fetchFeatMovie} movie ={featMovie[0]} />
-      {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
-      {console.log('info', info)}
       <Col title='populares' movies={popMovies} />
-      <Col title='mi lista' movies={addedMovies} />
+     </div>
+      {/* <NavBar/> */}
+      {/* <Sidebar /> */}
+
+      {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
+      {/* {console.log('info', info)} */}
+
+      {/* <Col title='mi lista' movies={addedMovies} /> */}
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
-      <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} />
-      <colOptions />
+      {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
+      {/* <colOptions /> */}
     </div>
   );
 }
