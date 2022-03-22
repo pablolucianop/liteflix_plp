@@ -5,10 +5,19 @@ import {useDropzone} from 'react-dropzone';
 function Upload() {
     const [name, setName] = useState("");
     const [files, setFiles] = useState([]);
+    const [uploadedMovies, setUploadedMovies] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    let actual= {
+        title: name,
+        backdrop_path: files[0].preview
+    }
+    setUploadedMovies([...uploadedMovies, actual]);
     alert(`The name you entered was: ${name}`);
+    console.log('uploadedMovies',actual)
+    console.log('uploadedMovies',uploadedMovies)
+
   }
 
     const {getRootProps, getInputProps, isDragActive} = useDropzone({
@@ -30,7 +39,7 @@ function Upload() {
  return (
     <div className ='Upload' > 
     <h1>Agregá un archivo</h1>
-    <form onSubmit={handleSubmit}>
+    <form>
       <label>
         <input 
           type="text" 
@@ -51,8 +60,7 @@ function Upload() {
                 // <p>Arrastra las imágenes aquí o haz click para seleccionar</p>
             }           
         </div> 
-
-        <div className='subirPelicula'>
+        <div className='subirPelicula' onClick={handleSubmit}>
      subir Película
         </div> 
         <div className='salir'>
