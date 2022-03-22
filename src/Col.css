@@ -4,6 +4,7 @@
   background-color: firebrick;
   /* width: 200px; */
   /* min-width: 200px; */
+  padding-top: 5em;
   position: absolute;
   top: 10px;
 }
@@ -11,5 +12,6 @@
   .col {
     position: relative;
     width: 100%;
+    padding-top: 1em;
   }
 }

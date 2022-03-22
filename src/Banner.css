@@ -4,4 +4,15 @@
   /* height: 448px;
   width: 200px; */
   width: 100%;
+  min-height: 70vh;
+}
+.banner_content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20%;
+  align-items: center;
+  border: 2px solid tomato;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
 }
