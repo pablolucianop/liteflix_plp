@@ -5,6 +5,7 @@
   width: 200px; */
   width: 100%;
   min-height: 70vh;
+  height: 100vh;
 }
 .banner_content {
   display: flex;

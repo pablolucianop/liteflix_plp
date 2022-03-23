@@ -5,11 +5,12 @@ import plus from './img/plus.svg';
 
 function Banner({movie}) {
     const baseURL = `https://image.tmdb.org/t/p/w500/`;
-const aaa = 'linear-gradient(180deg, rgba(36, 36, 36, 0) 33%, #242424 100%)'
+const gradientBottom = 'linear-gradient(180deg, rgba(36, 36, 36, 0) 33%, #242424 100%)'
+const gradientTop = 'linear-gradient(0deg, rgba(0, 0, 0, 0) 90%, #000000 122.69%)'
 
   return (
     <header className= 'banner'
-      style={{ backgroundImage: `${aaa} , url(${baseURL}${movie?.backdrop_path})`,
+      style={{ backgroundImage: `${gradientTop} , url(${baseURL}${movie?.backdrop_path})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center'}} 

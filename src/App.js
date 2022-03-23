@@ -16,6 +16,7 @@ function App() {
     const [popMovies, setMovies] = useState([]);
     const [featMovie, setFeatMovie] = useState([]);
     const [addedMovies, setaddedMovies] = useState([]);
+    const [openSideBar, setOpenSideBar] = useState(false);
     const popularMoviesToShow = 4;
     const baseURL = `https://image.tmdb.org/t/p/w500/`; 
 
@@ -33,10 +34,11 @@ function App() {
     }, []);
 
   return (
-    <div className="app">
-     < div className="content">
-      <Banner fetchUrl={apiRequests.fetchFeatMovie} movie ={featMovie[0]} />
-      <Col title='populares' movies={popMovies} />
+    <div className="app"  >
+     < div className="content"  onClick={() => {setOpenSideBar(true)}} >
+      <Banner fetchUrl={apiRequests.fetchFeatMovie} movie ={featMovie[0]}  />
+      <Col title='populares' movies={popMovies} 
+      />
      </div>
 
 
@@ -46,10 +48,10 @@ function App() {
 
       {/* <Col title='mi lista' movies={addedMovies} /> */}
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
-      <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} />
+      {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
       {/* <colOptions /> */}
-      <NavBar/>
-      {/* <Sidebar /> */}
+      <NavBar />
+      {openSideBar && <Sidebar setOpenSideBar={setOpenSideBar} />}
     </div>
   );
 }

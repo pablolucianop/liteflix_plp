@@ -3,14 +3,15 @@ import './Sidebar.css';
 import {SidebarData} from './SidebarData'
 import plusHvyTransImg from './img/plusHvyTrans.svg';
 
-function Sidebar() {
+function Sidebar(props) {
     return (
-        <div className="sidebar">
+        <div className="sidebar"  onClick={()=>{console.log(props.setOpenSideBar(false))}} >
+            <button className="sidebarButton">x</button>
             <ul className="sidebarList"> 
                 {SidebarData.map((val, key) => {
                     return(
                         // {nav.var}
-                        <li className="sidebarItem light" key={key} onClick={()=>{window.location.pathname = val.link}}>
+                        <li className="sidebarItem light" key={key} >
                          {
                          val.icon && <img className="sidebarItemIcon" src={plusHvyTransImg} alt="Agregar película"/>  
                          }
@@ -19,6 +20,8 @@ function Sidebar() {
                     )
                 })}
             </ul> 
+            <div className="modal-backdrop"> 
+            </div>
         </div>  
     )     
 }
