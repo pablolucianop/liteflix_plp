@@ -42,13 +42,12 @@ console.log('addedMovies', addedMovies);
     <div className="app">
      < div className="content">
 
-      <NavBar/>
 
       <Banner fetchUrl={apiRequests.fetchFeatMovie} movie ={featMovie[0]} />
       <Col title='populares' movies={popMovies} />
      </div>
 
-      {/* <Sidebar /> */}
+
 
       {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
       {/* {console.log('info', info)} */}
@@ -57,6 +56,8 @@ console.log('addedMovies', addedMovies);
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
       {/* <colOptions /> */}
+      <NavBar/>
+      <Sidebar />
     </div>
   );
 }
