@@ -6,56 +6,49 @@
   justify-content: space-between;
   position: fixed;
   top: 0;
-  /* padding-top: 12px; */
-  /* max-width: 87.3%; */
   background-color: rgb(54, 49, 102);
-  /* min-height: 36px; */
 }
-.navbar_logo {
-  object-fit: contain;
-  /* width: 113px; */
-  padding: 0.5em;
-  /* margin-right: 64px; */
-  min-width: 113px;
-  /* min-width: 98px; */
-}
-.hamburger {
-  object-fit: contain;
-  min-width: 27px;
-  padding-right: 20px;
-}
-.plusHvyTrans {
-  object-fit: contain;
-  width: 14px;
-  margin-right: 12px;
-}
-.notification {
-  object-fit: contain;
-  min-width: 23.4px;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-.avatar {
-  object-fit: contain;
-  width: 40px;
-  max-width: 40px;
-  min-width: 36px;
-  object-fit: cover;
-  border-radius: 50%;
+.navbar_right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
 }
 
 .navbar_left {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
 }
 
-.navbar_right {
+.hamburger {
+  width: 27px;
+  margin-right: 20px;
+}
+.notification {
+  width: 23.4px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+.navbar_logo {
+  width: 113px;
+}
+.addMovie {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 64px;
+  font-weight: 200;
+  /* justify-content: space-between; */
 }
-
-@media screen and (max-width: 600px) {
-  .hamburgerRightMargin {
-    transform: scaleX(-1);
-  }
+.plusHvyTrans {
+  margin-right: 12px;
+}
+.navbar_logo {
+  width: 113px;
 }
