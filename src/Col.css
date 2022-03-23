@@ -6,12 +6,12 @@
   /* background-color: firebrick; */
   /* width: 200px; */
   /* min-width: 200px; */
+  width: 220px;
   padding-top: 5em;
   position: absolute;
   top: 10px;
 }
 .col_movie {
-  width: 220px;
   height: 146px;
   margin-bottom: 10px;
   width: 100%;
@@ -23,8 +23,32 @@
   transition: transform 500ms;
   background-color: rgb(47, 47, 47);
   /* max-width: 327px; */
+  /* border: 1px solid rgb(47, 47, 47); */
   text-align: center;
+  position: relative;
 }
+.central_movie {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.titleMovie {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 0;
+  /* justify-content: center;
+  text-align: center; */
+}
+
 @media screen and (max-width: 600px) {
   .col {
     position: relative;
