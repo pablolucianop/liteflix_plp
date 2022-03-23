@@ -24,6 +24,12 @@ body {
   -moz-osx-font-smoothing: grayscale; */
 }
 
+img {
+  /* display: block; */
+  /* width: 100%; */
+  max-width: 100%;
+}
+
 body,
 h1,
 h2,
@@ -50,7 +56,7 @@ header {
 
 .container {
   margin-inline: auto;
-  width: min(90% - 2rem);
+  width: 85.55%;
 }
 
 .bg {

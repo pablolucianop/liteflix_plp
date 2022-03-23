@@ -7,7 +7,7 @@ import hamburgerImg from './img/hamburger.svg';
 import plusHvyTransImg from './img/plusHvyTrans.svg';
 
 function NavBar(){
-    let desktop= false
+    let desktop= true
     const logo=
             <img 
                 className="navbar_logo" 

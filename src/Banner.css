@@ -10,7 +10,8 @@
   display: flex;
   flex-direction: column;
   padding-top: 20%;
-  align-items: center;
+  /* align-items: center; */
+  margin-left: auto;
   /* border: 2px solid tomato; */
   height: 100%;
   width: 100%;
