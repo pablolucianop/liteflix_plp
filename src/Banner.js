@@ -5,18 +5,18 @@ import plus from './img/plus.svg';
 
 function Banner({movie}) {
     const baseURL = `https://image.tmdb.org/t/p/w500/`;
-
+const aaa = 'linear-gradient(180deg, rgba(36, 36, 36, 0) 33%, #242424 100%)'
 
   return (
     <header className= 'banner'
-      style={{ backgroundImage: `url(${baseURL}${movie?.backdrop_path})`,
+      style={{ backgroundImage: `${aaa} , url(${baseURL}${movie?.backdrop_path})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center'}} 
     >
       <div className= 'container'> 
         <div className= 'banner_content'>  
-          <p>original de <b>liteflix</b></p>
+          <div className= 'tagline'>original de <b>liteflix</b></div>
           <b className= 'banner_title'>{movie?.title}</b>
             <div className= 'banner_buttons'>  
                 <button className='banner_button' >
