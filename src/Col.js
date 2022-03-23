@@ -6,6 +6,7 @@ import star from './img/star.svg';
 function Col({ title, movies }) {
     const popularMoviesToShow = 4;
     const baseURL = `https://image.tmdb.org/t/p/w500/`; //https://image.tmdb.org/t/p/w500/
+    const gradient = 'linear-gradient(180deg, rgba(0, 0, 0, 0) 50.78%, #000000 122.69%),'
     console.log('movies', movies);
   
     return(
@@ -14,7 +15,7 @@ function Col({ title, movies }) {
                 <div className='col_movies'>
                     {movies.slice(0,popularMoviesToShow).map(movie => (
                         <div className='col_movie' key={movie.id} 
-                            style={{ backgroundImage: title=== 'mi lista' ? `url(${movie.backdrop_path})` : `url(${baseURL}${movie.backdrop_path})`}} 
+                            style={{ backgroundImage: title=== 'mi lista' ? `${gradient}url(${movie.backdrop_path}${movie.backdrop_path})` : `${gradient}url(${baseURL}${movie.backdrop_path})`}} 
                 >
                     <div  class="central_movie" >
                         <img src={playCircle} className="playCircle" alt="reproducir película"></img> 
@@ -50,3 +51,6 @@ export default Col;
                             {
                                 movie.release_date && <p>{movie.release_date.slice(0,4)}</p>
                             } */
+
+
+                            
