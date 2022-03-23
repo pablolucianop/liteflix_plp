@@ -10,7 +10,6 @@ function Col({ title, movies }) {
   
     return(
         <div className='col'>
-            <div className= 'container'> 
                 <h2>{title}</h2>
                 <div className='col_movies'>
                     {movies.slice(0,popularMoviesToShow).map(movie => (
@@ -45,7 +44,6 @@ function Col({ title, movies }) {
                         </div>
                     ))}
                 </div>
-           </div>     
         </div>
     )
 }
