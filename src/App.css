@@ -20,9 +20,6 @@ body {
   letter-spacing: 0.25rem;
   background-color: var(--colorDark);
   /* line-height: 1.125rem; */
-
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
 }
 
 img {

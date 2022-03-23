@@ -17,10 +17,10 @@ function Col({ title, movies }) {
                         <div className='col_movie' key={movie.id} 
                             style={{ backgroundImage: title=== 'mi lista' ? `${gradient}url(${movie.backdrop_path}${movie.backdrop_path})` : `${gradient}url(${baseURL}${movie.backdrop_path})`}} 
                 >
-                    <div  class="central_movie" >
+                    <div  className="central_movie" >
                         <img src={playCircle} className="playCircle" alt="reproducir película"></img> 
                     </div>
-                    <h3 class="titleMovie light">{movie.title}</h3>
+                    <h3 className="titleMovie light">{movie.title}</h3>
                 </div>
 
                     ))}

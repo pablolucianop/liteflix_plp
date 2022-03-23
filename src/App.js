@@ -22,11 +22,12 @@ function App() {
     useEffect(() => {
         async function fetchData() {
             console.log('fetchUrl', apiRequests.fetchPopMovies);
-            const request = await axios.get(apiRequests.fetchPopMovies);
-            setMovies(request.data.results);
-            const request2 = await axios.get(apiRequests.fetchFeatMovie);
-            setFeatMovie(request2.data.results);
-            return request
+            const requestPopMovies = await axios.get(apiRequests.fetchPopMovies);
+            setMovies(requestPopMovies.data.results);
+            const requestFeatMovie = await axios.get(apiRequests.fetchFeatMovie);
+            setFeatMovie(requestFeatMovie.data.results);
+
+            return requestPopMovies
         }
         fetchData()
     }, []);
@@ -48,7 +49,7 @@ function App() {
       <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} />
       {/* <colOptions /> */}
       <NavBar/>
-      <Sidebar />
+      {/* <Sidebar /> */}
     </div>
   );
 }

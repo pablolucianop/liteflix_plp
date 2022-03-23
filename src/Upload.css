@@ -5,8 +5,13 @@
   align-items: center;
   height: 440px;
   width: 730px;
+  /* background-color: tomato; */
 }
-
+.uploaderTitle {
+  color: var(--colorAccent);
+  font-size: 20px;
+  margin-bottom: 68px;
+}
 .dropHere {
   display: flex;
   justify-content: center;
@@ -14,6 +19,25 @@
   height: 100px;
   width: 602px;
   border: 1px dashed #ffffff;
+}
+.closeBtn {
+  width: 15px;
+  right: 24px;
+}
+
+.upload-button {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 284px;
+  height: 56px;
+  background-color: #919191;
+  color: var(--colorDark);
+  border: none;
+  font-family: BebasNeue-Thin;
+  font-size: 18px;
 }
 
 .minimal-input {
@@ -23,25 +47,25 @@
   transition: all 125ms ease-out 125ms;
 }
 .minimal-input::-webkit-input-placeholder {
-  color: #bdc3c7;
+  color: #ffffff;
 }
 .minimal-input:-moz-placeholder {
-  color: #bdc3c7;
+  color: #ffffff;
 }
 .minimal-input::-moz-placeholder {
-  color: #bdc3c7;
+  color: #ffffff;
 }
 .minimal-input:-ms-input-placeholder {
-  color: #bdc3c7;
+  color: #ffffff;
 }
 .minimal-input {
   border: 0;
   border-bottom: 1px solid #ffffff;
   outline: none;
-  width: 100%;
+  width: 248px;
   text-align: center;
-  font-family: 'BebasNeue-Thin', sans-serif;
-  font-size: 26px;
+  font-family: 'BebasNeue-Regular', sans-serif;
+  font-size: 16px;
   background-color: transparent;
   color: #ffffff;
 }
