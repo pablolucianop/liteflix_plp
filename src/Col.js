@@ -19,7 +19,7 @@ function Col({ title, movies }) {
                     <div  class="central_movie" >
                         <img src={playCircle} className="playCircle" alt="reproducir película"></img> 
                     </div>
-                    <h3 class="titleMovie">{movie.title}</h3>
+                    <h3 class="titleMovie light">{movie.title}</h3>
                 </div>
 
                     ))}
