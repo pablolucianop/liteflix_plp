@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useDropzone} from 'react-dropzone';
-// import '/Upload.css'
+import './Upload.css'
 
 function Upload({setaddedMovies, xxy}) {
     const [name, setName] = useState("");
@@ -37,28 +37,30 @@ function Upload({setaddedMovies, xxy}) {
         </div>
     ));
  return (
-    <div className ='Upload' > 
+    <div className ='upload' > 
     <h1>Agregá un archivo</h1>
     <form>
-      <label>
+
+
+    </form>
+        <div className='dropzone' {...getRootProps()}>
+            <input  {...getInputProps()} />
+            {
+                // isDragActive ?
+                <div className='dropHere'>Agregá un archivo o arrastralo y soltalo aquí</div> 
+                // :
+                // <p>Arrastra las imágenes aquí o haz click para seleccionar</p>
+            }           
+        </div> 
+              <label>
         <input 
+        className ='minimal-input'
           type="text" 
           value={name}
           placeholder="Título"
           onChange={(e) => setName(e.target.value)}
         />
       </label>
-
-    </form>
-        <div className='dropzone' {...getRootProps()}>
-            <input {...getInputProps()} />
-            {
-                // isDragActive ?
-                <p>Agregá un archivo</p> 
-                // :
-                // <p>Arrastra las imágenes aquí o haz click para seleccionar</p>
-            }           
-        </div> 
         <div className='subirPelicula' onClick={handleSubmit}>
      subir Película
         </div> 
