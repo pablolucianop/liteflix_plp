@@ -27,7 +27,7 @@
   margin-right: 20px;
 }
 .notification {
-  width: 23.4px;
+  width: 24dpx;
   margin-right: 20px;
   margin-left: 20px;
 }
@@ -44,10 +44,12 @@
   align-items: center;
   margin-left: 64px;
   font-weight: 200;
-  /* justify-content: space-between; */
+  font-family: 'BebasNeue-Thin';
 }
 .plusHvyTrans {
+  width: 14px;
   margin-right: 12px;
+  font-weight: 200;
 }
 .navbar_logo {
   width: 113px;

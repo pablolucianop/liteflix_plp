@@ -27,11 +27,11 @@ function Banner({movie}) {
                 </img>
                   Reproducir
                 </button>
-                <button className='banner_button' >
+                <button className='banner_button banner_button-secundary' >
                   <img 
                     className="plus" 
                     src={plus} 
-                    alt="agregar película">
+                    alt="mi lista">
                   </img>
                   Mi lista
                 </button>
