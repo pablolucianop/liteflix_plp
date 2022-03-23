@@ -1,3 +1,13 @@
+.sidebarBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(36, 36, 36, 0.8);
+  width: 100vw;
+  height: 1000vh;
+  z-index: -10;
+}
+
 .sidebar {
   width: 751px;
   /* height: 100vh; */
@@ -32,10 +42,4 @@ body {
 .sidebarItem:hover {
   cursor: pointer;
   /* background-color: darkslategray; */
-}
-
-.modal-backdrop {
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(36, 36, 36, 0.9);
 }

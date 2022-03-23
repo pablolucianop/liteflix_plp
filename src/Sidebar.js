@@ -5,8 +5,9 @@ import plusHvyTransImg from './img/plusHvyTrans.svg';
 
 function Sidebar(props) {
     return (
-        <div className="sidebar"  onClick={()=>{console.log(props.setOpenSideBar(false))}} >
-            <button className="sidebarButton">x</button>
+        <div className="sidebar"   >
+
+            <button className="sidebarButton" onClick={()=>{props.setOpenSideBar(false)}}>x</button>
             <ul className="sidebarList"> 
                 {SidebarData.map((val, key) => {
                     return(
@@ -20,8 +21,7 @@ function Sidebar(props) {
                     )
                 })}
             </ul> 
-            <div className="modal-backdrop"> 
-            </div>
+            <div className="sidebarBackdrop"></div>
         </div>  
     )     
 }
