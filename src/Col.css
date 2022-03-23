@@ -1,8 +1,7 @@
 .col {
   /* margin: 20px; */
   color: #ffffff;
-  /* width: 220px; */
-  /* height: 146px; */
+
   /* color: var(--color2); */
   /* background-color: firebrick; */
   /* width: 200px; */
@@ -12,8 +11,8 @@
   top: 10px;
 }
 .col_movie {
-  /* width: 220px; */
-  /* height: 145px; */
+  width: 220px;
+  height: 146px;
   margin-bottom: 10px;
   width: 100%;
   background-repeat: no-repeat;

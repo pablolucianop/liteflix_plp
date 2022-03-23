@@ -25,7 +25,7 @@ function Col({ title, movies }) {
                                     alt="reproducir película">
                                 </img>
                                 <h3>{movie.title}</h3>
-                                {
+                                {/* {
                                 movie.vote_average &&
                                     <div className="average">
                                         <img 
@@ -38,7 +38,7 @@ function Col({ title, movies }) {
                             }
                             {
                                 movie.release_date && <p>{movie.release_date.slice(0,4)}</p>
-                            }
+                            } */}
                                 
                             </div>
                         </div>
