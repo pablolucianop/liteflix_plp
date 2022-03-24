@@ -1,10 +1,10 @@
 export const colData = [
   {
     title: 'populares',
-    link: 'home',
+    link: 'populares',
   },
   {
     title: 'mis películas',
-    link: 'home',
+    link: 'mis peliculas',
   },
 ]

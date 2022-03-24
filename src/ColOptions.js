@@ -1,29 +1,23 @@
 import React from 'react'
 // import './ColOptions.css'
+import { colData } from './colData'
 import plusHvyTransImg from './img/plusHvyTrans.svg'
 
-function ColOptions() {
-  const SidebarOptionsArr = ['populares', 'mis películas']
+function ColOptions({ setColContent }) {
+  const SidebarOptionsArr = colData
   return (
-    <div className="sidebar">
-      <ul className="sidebarList">
+    <div>
+      <ul>
         {SidebarOptionsArr.map((val, key) => {
           return (
             // {nav.var}
             <li
-              className="sidebarItem light"
               key={key}
               onClick={() => {
-                window.location.pathname = val.link
+                setColContent(val.link)
               }}
             >
-              {val.icon && (
-                <img
-                  className="sidebarItemIcon"
-                  src={plusHvyTransImg}
-                  alt="Agregar película"
-                />
-              )}
+              {val.icon && <img src={plusHvyTransImg} alt="checkmark" />}
               {val.title}
             </li>
           )
