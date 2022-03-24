@@ -94,4 +94,9 @@
     padding-top: 1em;
     margin-right: 0%;
   }
+  .col_movie {
+    /* height: 146px; */
+    min-height: 146px;
+    height: 38.9333vw;
+  }
 }
