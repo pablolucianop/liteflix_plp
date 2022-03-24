@@ -26,8 +26,6 @@ function App() {
     current: 'none',
   })
   const [colContent, setColContent] = useState('populares')
-  const popularMoviesToShow = 4
-  const baseURL = `https://image.tmdb.org/t/p/w500/`
 
   useEffect(() => {
     async function fetchData() {
