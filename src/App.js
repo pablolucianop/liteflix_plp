@@ -75,7 +75,7 @@ function App() {
       {/* <colOptions /> */}
       <NavBar setOpenSideBar={setOpenSideBar} />
       {openSideBar.current === 'sidebar' && (
-        <Sidebar setOpenSideBar={setOpenSideBar} />
+        <Sidebar setOpenSideBar={setOpenSideBar} colContent={colContent} />
       )}
     </div>
   )

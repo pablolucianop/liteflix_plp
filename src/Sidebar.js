@@ -1,6 +1,6 @@
 import React from 'react'
 import './Sidebar.css'
-import { SidebarData } from './SidebarData'
+import { sidebarData } from './sidebarData'
 import plusHvyTransImg from './img/plusHvyTrans.svg'
 import close from './img/close.svg'
 function Sidebar(props) {
@@ -15,7 +15,7 @@ function Sidebar(props) {
         alt="close"
       ></img>
       <ul className="sidebarList">
-        {SidebarData.map((val, key) => {
+        {sidebarData.map((val, key) => {
           return (
             // {nav.var}
             <li

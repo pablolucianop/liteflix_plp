@@ -1,6 +1,4 @@
-import React from 'react'
-
-export const SidebarData = [
+export const sidebarData = [
   {
     title: 'inicio',
     link: 'home',

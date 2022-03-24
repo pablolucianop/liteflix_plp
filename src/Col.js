@@ -3,7 +3,7 @@ import './Col.css'
 import playCircle from './img/playCircle.svg'
 import star from './img/star.svg'
 import arrow from './img/arrow.svg'
-import ColOptions from './ColOptions'
+
 // import { info } from './info'
 
 function Col({ title, popMovies, addedMovies, setColContent }) {
