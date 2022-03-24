@@ -1,9 +1,9 @@
 import React from 'react'
 // import './ColOptions.css'
 import { colData } from './colData'
-import plusHvyTransImg from './img/plusHvyTrans.svg'
+import check from './img/check.svg'
 
-function ColOptions({ setColContent }) {
+function ColOptions({ setColContent, colContent }) {
   const SidebarOptionsArr = colData
   return (
     <div>
@@ -17,8 +17,8 @@ function ColOptions({ setColContent }) {
                 setColContent(val.link)
               }}
             >
-              {val.icon && <img src={plusHvyTransImg} alt="checkmark" />}
               {val.title}
+              {val.link === colContent && <img src={check} alt="checkmark" />}
             </li>
           )
         })}
