@@ -3,6 +3,8 @@ import './Col.css'
 import playCircle from './img/playCircle.svg'
 import star from './img/star.svg'
 import arrow from './img/arrow.svg'
+import ColOptions from './ColOptions'
+import { info } from './info'
 
 function Col({ title, movies, setColContent }) {
   const popularMoviesToShow = 4
@@ -19,7 +21,6 @@ function Col({ title, movies, setColContent }) {
           setColContent('mi lista')
         }}
       >
-        {' '}
         ver:{title}
         <img
           src={arrow}

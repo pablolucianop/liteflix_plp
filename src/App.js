@@ -14,6 +14,10 @@ import Upload from './Upload'
 function App() {
   const [popMovies, setMovies] = useState([])
   const [featMovie, setFeatMovie] = useState([])
+  const [colContent, setColContent] = useState('populares')
+  const [openSideBar, setOpenSideBar] = useState({
+    current: 'none',
+  })
   const [addedMovies, setaddedMovies] = useState([
     {
       title: 'click aqui para añadir una película',
@@ -22,10 +26,6 @@ function App() {
       backdrop_path: '',
     },
   ])
-  const [openSideBar, setOpenSideBar] = useState({
-    current: 'none',
-  })
-  const [colContent, setColContent] = useState('populares')
 
   useEffect(() => {
     async function fetchData() {
@@ -40,10 +40,8 @@ function App() {
       ) {
         requestPopMovies.data.results.shift()
       }
-      // console.log(requestPopMovies[0])
       setMovies(requestPopMovies.data.results)
       setFeatMovie(requestFeatMovie.data.results)
-
       return requestPopMovies
     }
     fetchData()
@@ -76,7 +74,7 @@ function App() {
       {openSideBar.current === 'upload' && (
         <Upload
           setaddedMovies={setaddedMovies}
-          xxy={addedMovies}
+          addedMovies={addedMovies}
           setOpenSideBar={setOpenSideBar}
         />
       )}
