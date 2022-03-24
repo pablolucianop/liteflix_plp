@@ -6,8 +6,8 @@ import notificationImg from './img/notification.svg'
 import hamburgerImg from './img/hamburger.svg'
 import plusHvyTransImg from './img/plusHvyTrans.svg'
 
-function NavBar({ setOpenSideBar }) {
-  let desktop = true
+function NavBar({ setOpenSideBar, minWidthReached }) {
+  let desktop = !minWidthReached
   const logo = <img className="navbar_logo" src={logoImg} alt="logo"></img>
   const addMovie = (
     <div

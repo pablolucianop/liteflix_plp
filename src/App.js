@@ -6,15 +6,18 @@ import apiRequests from './apiRequests'
 import Banner from './Banner'
 import NavBar from './NavBar'
 import Sidebar from './Sidebar'
-import ColOptions from './ColOptions'
+import BreakingPoint from './BreakingPoint'
+
 // import { info } from './info'
 import './App.css'
 import Upload from './Upload'
+// import BreakingPoint from './BreakingPoint'
 
 function App() {
   const [popMovies, setMovies] = useState([])
   const [featMovie, setFeatMovie] = useState([''])
   const [colContent, setColContent] = useState('populares')
+  const [minWidthReached, setminWidthReached] = useState('')
   const [openSideBar, setOpenSideBar] = useState({
     current: 'home',
   })
@@ -32,6 +35,7 @@ function App() {
       const requestPopMovies = await axios.get(apiRequests.fetchPopMovies)
       const requestFeatMovie = await axios.get(apiRequests.fetchFeatMovie)
 
+      console.log('minWidthReached', minWidthReached)
       //if the first feature movie is the same as the first popular movie, then we need to get the next one
       if (
         requestPopMovies.data.results[0].id ===
@@ -49,6 +53,7 @@ function App() {
   return (
     <div className="app">
       <div className="content">
+        <BreakingPoint setminWidthReached={setminWidthReached} />
         <Banner movie={featMovie[0]} setColContent={setColContent} />
         <Col
           title={colContent}
@@ -78,7 +83,10 @@ function App() {
       {openSideBar.current === 'sidebar' && (
         <Sidebar setOpenSideBar={setOpenSideBar} colContent={colContent} />
       )}
-      <NavBar setOpenSideBar={setOpenSideBar} />
+      <NavBar
+        setOpenSideBar={setOpenSideBar}
+        minWidthReached={minWidthReached}
+      />
     </div>
   )
 }
