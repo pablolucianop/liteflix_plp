@@ -55,19 +55,13 @@ function App() {
         }}
       >
         <Banner fetchUrl={apiRequests.fetchFeatMovie} movie={featMovie[0]} />
-        {colContent === 'populares' ? (
-          <Col
-            title="populares"
-            movies={popMovies}
-            setColContent={setColContent}
-          />
-        ) : (
-          <Col
-            title="mi lista"
-            movies={addedMovies}
-            setColContent={setColContent}
-          />
-        )}
+
+        <Col
+          title={colContent}
+          popMovies={popMovies}
+          addedMovies={addedMovies}
+          setColContent={setColContent}
+        />
       </div>
 
       {openSideBar.current === 'upload' && (
