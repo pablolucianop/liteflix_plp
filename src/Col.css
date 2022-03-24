@@ -60,6 +60,18 @@
   align-items: center;
 }
 
+.title-hover {
+  display: none;
+  margin-left: 10px;
+}
+
+.col_movie:hover .title-hover {
+  display: block;
+}
+.col_movie:hover .titleMovie {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .col {
     position: relative;

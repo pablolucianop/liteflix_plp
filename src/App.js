@@ -7,7 +7,7 @@ import Banner from './Banner'
 import NavBar from './NavBar'
 import Sidebar from './Sidebar'
 import ColOptions from './ColOptions'
-import { info } from './info'
+// import { info } from './info'
 import './App.css'
 import Upload from './Upload'
 
@@ -29,7 +29,6 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      console.log('fetchUrl', apiRequests.fetchPopMovies)
       const requestPopMovies = await axios.get(apiRequests.fetchPopMovies)
       const requestFeatMovie = await axios.get(apiRequests.fetchFeatMovie)
 

@@ -4,11 +4,11 @@ import playCircle from './img/playCircle.svg'
 import star from './img/star.svg'
 import arrow from './img/arrow.svg'
 import ColOptions from './ColOptions'
-import { info } from './info'
+// import { info } from './info'
 
 function Col({ title, movies, setColContent }) {
   const popularMoviesToShow = 4
-  const baseURL = `https://image.tmdb.org/t/p/w500/` //https://image.tmdb.org/t/p/w500/
+  const baseURL = `https://image.tmdb.org/t/p/w500/`
   const gradient =
     'linear-gradient(180deg, rgba(0, 0, 0, 0) 50.78%, #000000 122.69%),'
   console.log('movies', movies)
@@ -46,6 +46,7 @@ function Col({ title, movies, setColContent }) {
                 className="playCircle"
                 alt="reproducir película"
               ></img>
+              <div className="title-hover">{movie.title}</div>
             </div>
             <h3 className="titleMovie light">{movie.title}</h3>
           </div>
