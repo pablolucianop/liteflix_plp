@@ -1,43 +1,41 @@
-import React from 'react';
+import React from 'react'
 
 export const SidebarData = [
-    {
-        title: 'inicio',
-        link: '/popular',
-    },
-    {
-        title: 'series',
-        link: '/series',
-    },
-    {
-        title: 'películas',
-        link: '/peliculas',
-    },
-    {
-        title: 'agregadas recientemente',
-        link: '/agregadasRecientemente',
-    },
-    {
-        title: 'populares',
-        link: '/populares',
-    },
-    {
-        title: 'mis películas',
-        link: '/misPeliculas',
-    },
-    {
-        title: 'mi lista',
-        link: '/miLista',
-    },
-    {
-        title: 'agregar película',
-        link: '/agregarPelicula',
-        icon: 'plusHvyTransImg',
-    },
-    {
-        title: 'cerrar sesión',
-        link: '/cerrarSesion',
-    },
-    
+  {
+    title: 'inicio',
+    link: 'home',
+  },
+  {
+    title: 'series',
+    link: 'home',
+  },
+  {
+    title: 'películas',
+    link: 'home',
+  },
+  {
+    title: 'agregadas recientemente',
+    link: 'home',
+  },
+  {
+    title: 'populares',
+    link: 'home',
+  },
+  {
+    title: 'mis películas',
+    link: 'home',
+  },
+  {
+    title: 'mi lista',
+    link: 'home',
+  },
+  {
+    title: 'agregar película',
+    link: 'upload',
+    icon: 'plusHvyTransImg',
+  },
+  {
+    title: 'cerrar sesión',
+    link: 'home',
+  },
 ]
-   

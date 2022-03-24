@@ -13,10 +13,10 @@ import Upload from './Upload'
 
 function App() {
   const [popMovies, setMovies] = useState([])
-  const [featMovie, setFeatMovie] = useState([])
+  const [featMovie, setFeatMovie] = useState([''])
   const [colContent, setColContent] = useState('populares')
   const [openSideBar, setOpenSideBar] = useState({
-    current: 'none',
+    current: 'home',
   })
   const [addedMovies, setaddedMovies] = useState([
     {

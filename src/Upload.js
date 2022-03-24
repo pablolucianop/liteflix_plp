@@ -50,7 +50,7 @@ function Upload({ setaddedMovies, addedMovies, setOpenSideBar }) {
         alt="close"
         onClick={() => {
           // alert('close')
-          setOpenSideBar({ current: 'none' })
+          setOpenSideBar({ current: 'home' })
         }}
       ></img>
 
