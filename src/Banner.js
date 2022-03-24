@@ -3,21 +3,24 @@ import './Banner.css'
 import play from './img/play.svg'
 import plus from './img/plus.svg'
 
-function Banner({ movie, setColContent }) {
+function Banner({ movie, setColContent, minWidthReached }) {
   const baseURL = `https://image.tmdb.org/t/p/w500/`
+
   const gradientBottom =
     'linear-gradient(180deg, rgba(36, 36, 36, 0) 33%, #242424 100%)'
   const gradientTop =
     'linear-gradient(0deg, rgba(0, 0, 0, 0) 90%, #000000 122.69%)'
+  const gradient = minWidthReached ? gradientBottom : gradientTop
+  console.log('minWidthReached', minWidthReached)
 
   return (
     <header
       className="banner"
       style={{
-        backgroundImage: `${gradientBottom} , url(${baseURL}${movie?.backdrop_path})`,
+        backgroundImage: `${gradient} , url(${baseURL}${movie?.backdrop_path})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundPosition: 'right',
       }}
     >
       <div className="container">

@@ -54,7 +54,11 @@ function App() {
     <div className="app">
       <div className="content">
         <BreakingPoint setminWidthReached={setminWidthReached} />
-        <Banner movie={featMovie[0]} setColContent={setColContent} />
+        <Banner
+          movie={featMovie[0]}
+          setColContent={setColContent}
+          minWidthReached={minWidthReached}
+        />
         <Col
           title={colContent}
           popMovies={popMovies}
