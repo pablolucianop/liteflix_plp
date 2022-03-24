@@ -15,7 +15,7 @@ import Upload from './Upload';
 function App() {
     const [popMovies, setMovies] = useState([]);
     const [featMovie, setFeatMovie] = useState([]);
-    const [addedMovies, setaddedMovies] = useState([]);
+    const [addedMovies, setaddedMovies] = useState([{title:'click aqui para añadir una película', id: '', poster_path: '', backdrop_path: ''}]);
     const [openSideBar, setOpenSideBar] = useState({
       current:'none',
     });
@@ -27,8 +27,14 @@ function App() {
         async function fetchData() {
             console.log('fetchUrl', apiRequests.fetchPopMovies);
             const requestPopMovies = await axios.get(apiRequests.fetchPopMovies);
-            setMovies(requestPopMovies.data.results);
             const requestFeatMovie = await axios.get(apiRequests.fetchFeatMovie);
+
+            //if the first feature movie is the same as the first popular movie, then we need to get the next one
+            if(requestPopMovies.data.results[0].id === requestFeatMovie.data.results[0].id){
+              requestPopMovies.data.results.shift()
+            }
+            // console.log(requestPopMovies[0])
+            setMovies(requestPopMovies.data.results);
             setFeatMovie(requestFeatMovie.data.results);
 
             return requestPopMovies
