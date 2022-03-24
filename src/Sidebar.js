@@ -8,7 +8,7 @@ function Sidebar(props) {
         <div className="sidebar"   >
  
         <img 
-            onClick={()=>{props.setOpenSideBar(false)}}
+            onClick={()=>{props.setOpenSideBar({current: 'none'})}}
         className="sidebarButton" 
         src={close} 
         alt="close">

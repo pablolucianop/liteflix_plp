@@ -44,6 +44,7 @@ function Upload({setaddedMovies, xxy}) {
         className="closeBtn" 
         src={close} 
         alt="close">
+        {/* onClick={()=>{setOpenSideBar({current: 'none'})}} */}
     </img>
     <div className ='uploaderTitle'>
 
