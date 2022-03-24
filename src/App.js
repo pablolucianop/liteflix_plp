@@ -7,11 +7,8 @@ import Banner from './Banner'
 import NavBar from './NavBar'
 import Sidebar from './Sidebar'
 import BreakingPoint from './BreakingPoint'
-
-// import { info } from './info'
 import './App.css'
 import Upload from './Upload'
-// import BreakingPoint from './BreakingPoint'
 
 function App() {
   const [popMovies, setMovies] = useState([])

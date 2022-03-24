@@ -14,7 +14,7 @@ function Upload({ setaddedMovies, addedMovies, setOpenSideBar }) {
     let actual = {
       title: name,
       backdrop_path: files[0].preview,
-      key: 'uploaded' + uploadedMovies.length,
+      id: 'uploaded' + uploadedMovies.length,
     }
     setUploadedMovies([...uploadedMovies, actual])
     setaddedMovies([...addedMovies, actual])
