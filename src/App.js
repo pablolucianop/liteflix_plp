@@ -56,6 +56,9 @@ function App() {
           popMovies={popMovies}
           addedMovies={addedMovies}
           setColContent={setColContent}
+          colContent={colContent}
+          setOpenSideBar={setOpenSideBar}
+          openSideBar={openSideBar}
         />
       </div>
 
@@ -72,7 +75,7 @@ function App() {
       {/* <Col title='mi lista' movies={addedMovies} /> */}
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
-      <ColOptions setColContent={setColContent} colContent={colContent} />
+      {/* <ColOptions setColContent={setColContent} colContent={colContent} /> */}
       <NavBar setOpenSideBar={setOpenSideBar} />
       {openSideBar.current === 'sidebar' && (
         <Sidebar setOpenSideBar={setOpenSideBar} colContent={colContent} />

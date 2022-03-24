@@ -3,10 +3,19 @@ import './Col.css'
 import playCircle from './img/playCircle.svg'
 import star from './img/star.svg'
 import arrow from './img/arrow.svg'
+import ColOptions from './ColOptions'
 
 // import { info } from './info'
 
-function Col({ title, popMovies, addedMovies, setColContent }) {
+function Col({
+  title,
+  popMovies,
+  addedMovies,
+  setColContent,
+  colContent,
+  setOpenSideBar,
+  openSideBar,
+}) {
   const popularMoviesToShow = 4
   const baseURL = `https://image.tmdb.org/t/p/w500/`
   const gradient =
@@ -31,10 +40,19 @@ function Col({ title, popMovies, addedMovies, setColContent }) {
 
   return (
     <div className="col">
+      {openSideBar === 'col options' && (
+        <ColOptions
+          setColContent={setColContent}
+          colContent={colContent}
+          setOpenSideBar={setOpenSideBar}
+          openSideBar={openSideBar}
+        />
+      )}
+
       <div
         className="col_header"
         onClick={() => {
-          setColContent('mi lista')
+          setOpenSideBar('col options')
         }}
       >
         <div className="light">ver:</div>

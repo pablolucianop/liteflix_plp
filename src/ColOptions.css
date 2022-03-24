@@ -1,0 +1,19 @@
+.colOptions {
+  width: 241px;
+  /* height: 100vh; */
+  background-color: rgba(36, 36, 36, 0.9);
+  position: absolute;
+  top: 0;
+  margin-top: 4.5em;
+
+  /* margin-right: 7.225%; */
+  right: 0%;
+  font-size: 22px;
+  /* padding-left: 88px; */
+  /* height: 100%; */
+  list-style: none;
+  z-index: 10;
+}
+li {
+  list-style: none;
+}
