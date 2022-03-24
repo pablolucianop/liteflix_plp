@@ -3,7 +3,7 @@ import './Col.css';
 import playCircle from './img/playCircle.svg';
 import star from './img/star.svg';
 
-function Col({ title, movies }) {
+function Col({ title, movies ,setColContent}) {
     const popularMoviesToShow = 4;
     const baseURL = `https://image.tmdb.org/t/p/w500/`; //https://image.tmdb.org/t/p/w500/
     const gradient = 'linear-gradient(180deg, rgba(0, 0, 0, 0) 50.78%, #000000 122.69%),'
@@ -11,7 +11,7 @@ function Col({ title, movies }) {
   
     return(
         <div className='col'>
-                <h2>{title}</h2>
+                <h2 onClick={()=>{setColContent('mi lista')}}  >{title}</h2>
                 <div className='col_movies'>
                     {movies.slice(0,popularMoviesToShow).map(movie => (
                         <div className='col_movie' key={movie.id} 

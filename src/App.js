@@ -40,7 +40,7 @@ function App() {
     <div className="app"  >
      < div className="content"  onClick={() => {setOpenSideBar({ current: 'upload' })}} >
       <Banner fetchUrl={apiRequests.fetchFeatMovie} movie ={featMovie[0]}  />
-      {colContent==='populares'?<Col title='populares' movies={popMovies}/>:<Col title='mi lista' movies={addedMovies} />}
+      {colContent==='populares'?<Col title='populares' movies={popMovies} setColContent={setColContent}/>:<Col title='mi lista' movies={addedMovies} setColContent={setColContent} />}
      </div>
 
 
