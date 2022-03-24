@@ -49,8 +49,7 @@ function App() {
   return (
     <div className="app">
       <div className="content">
-        <Banner fetchUrl={apiRequests.fetchFeatMovie} movie={featMovie[0]} />
-
+        <Banner movie={featMovie[0]} setColContent={setColContent} />
         <Col
           title={colContent}
           popMovies={popMovies}

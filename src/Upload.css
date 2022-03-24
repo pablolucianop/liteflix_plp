@@ -38,6 +38,9 @@
 .closeBtn {
   width: 15px;
   right: 24px;
+  position: absolute;
+  top: 24.8px;
+  right: 24.8px;
 }
 
 .upload-button {

@@ -3,7 +3,7 @@ import './Banner.css'
 import play from './img/play.svg'
 import plus from './img/plus.svg'
 
-function Banner({ movie }) {
+function Banner({ movie, setColContent }) {
   const baseURL = `https://image.tmdb.org/t/p/w500/`
   const gradientBottom =
     'linear-gradient(180deg, rgba(36, 36, 36, 0) 33%, #242424 100%)'
@@ -31,7 +31,12 @@ function Banner({ movie }) {
               <img className="play" src={play} alt="play"></img>
               Reproducir
             </button>
-            <button className="banner_button banner_button-secundary">
+            <button
+              className="banner_button banner_button-secundary"
+              onClick={() => {
+                setColContent('mi lista')
+              }}
+            >
               <img className="plus" src={plus} alt="mi lista"></img>
               Mi lista
             </button>
