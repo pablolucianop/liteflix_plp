@@ -14,7 +14,7 @@ function Banner({ movie, setColContent }) {
     <header
       className="banner"
       style={{
-        backgroundImage: `${gradientTop} , url(${baseURL}${movie?.backdrop_path})`,
+        backgroundImage: `${gradientBottom} , url(${baseURL}${movie?.backdrop_path})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',

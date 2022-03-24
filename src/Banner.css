@@ -22,7 +22,7 @@
   letter-spacing: 4px;
   /* line-height: 20px; */
   padding: auto;
-  background-color: tomato;
+  /* background-color: tomato; */
 }
 
 .banner_title {
@@ -92,5 +92,7 @@
   }
   .banner {
     height: 560px;
+    background-size: 10%;
+    /* background-size: 20%; */
   }
 }
