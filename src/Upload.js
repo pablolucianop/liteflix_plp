@@ -40,15 +40,18 @@ function Upload({setaddedMovies, xxy}) {
     ));
  return (
     <div className ='upload' > 
+     
     <img 
         className="closeBtn" 
         src={close} 
         alt="close">
         {/* onClick={()=>{setOpenSideBar({current: 'none'})}} */}
     </img>
-    <div className ='uploaderTitle'>
 
-      Agregá un archivo</div>
+    <div className ='uploaderTitle'>
+      Agregá un archivo
+    </div>
+
     <form>
 
 
@@ -92,6 +95,7 @@ function Upload({setaddedMovies, xxy}) {
                 </div>
             ))}
         </div>
+           <div className ='backdrop'> </div>
     </div> 
 
             
