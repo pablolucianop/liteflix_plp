@@ -49,6 +49,15 @@ function Col({ title, movies, setColContent }) {
               <div className="title-hover">{movie.title}</div>
             </div>
             <h3 className="titleMovie light">{movie.title}</h3>
+            <div className="extraInfo">
+              {movie.vote_average && (
+                <div className="average">
+                  <img className="star" src={star} alt="star"></img>
+                  <p>{movie.vote_average}</p>
+                </div>
+              )}
+              {movie.release_date && <p>{movie.release_date.slice(0, 4)}</p>}
+            </div>
           </div>
         ))}
       </div>
@@ -63,18 +72,3 @@ export default Col
 //     src={playCircle}
 //     alt="reproducir película">
 // </img>
-
-/* {
-movie.vote_average &&
-    <div className="average">
-        <img
-            className="star"
-            src={star}
-            alt="star">
-        </img>
-        <p>{movie.vote_average}</p>
-    </div>
-}
-{
-movie.release_date && <p>{movie.release_date.slice(0,4)}</p>
-} */
