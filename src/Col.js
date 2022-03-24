@@ -12,7 +12,22 @@ function Col({ title, popMovies, addedMovies, setColContent }) {
   const gradient =
     'linear-gradient(180deg, rgba(0, 0, 0, 0) 50.78%, #000000 122.69%),'
   let movies = popMovies
+
+  //change the movies to show depending on the title of the column
   title === 'populares' ? (movies = popMovies) : (movies = addedMovies)
+
+  //img elements in variables to make it more readable
+  const imgArrow = (
+    <img src={arrow} className="arrow" alt="elegir populares o mi lista"></img>
+  )
+  const imgPlayCircle = (
+    <img
+      src={playCircle}
+      className="playCircle"
+      alt="reproducir película"
+    ></img>
+  )
+  const imgStar = <img className="star" src={star} alt="star"></img>
 
   return (
     <div className="col">
@@ -22,12 +37,9 @@ function Col({ title, popMovies, addedMovies, setColContent }) {
           setColContent('mi lista')
         }}
       >
-        ver:{title}
-        <img
-          src={arrow}
-          className="arrow"
-          alt="elegir populares o mi lista"
-        ></img>
+        <div className="light">ver:</div>
+        {title}
+        {imgArrow}
       </div>
       <div className="col_movies">
         {movies.slice(0, popularMoviesToShow).map((movie) => (
@@ -42,22 +54,18 @@ function Col({ title, popMovies, addedMovies, setColContent }) {
             }}
           >
             <div className="central_movie">
-              <img
-                src={playCircle}
-                className="playCircle"
-                alt="reproducir película"
-              ></img>
+              {imgPlayCircle}
               <div className="title-hover">{movie.title}</div>
             </div>
             <h3 className="titleMovie light">{movie.title}</h3>
             <div className="extraInfo">
               {movie.vote_average && (
                 <div className="average">
-                  <img className="star" src={star} alt="star"></img>
-                  <p>{movie.vote_average}</p>
+                  {imgStar}
+                  {movie.vote_average}
                 </div>
               )}
-              {movie.release_date && <p>{movie.release_date.slice(0, 4)}</p>}
+              {movie.release_date && movie.release_date.slice(0, 4)}
             </div>
           </div>
         ))}
@@ -67,9 +75,3 @@ function Col({ title, popMovies, addedMovies, setColContent }) {
 }
 
 export default Col
-
-// <img
-//     className="playCircle"
-//     src={playCircle}
-//     alt="reproducir película">
-// </img>
