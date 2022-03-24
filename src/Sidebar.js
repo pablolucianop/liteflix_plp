@@ -10,7 +10,7 @@ function Sidebar(props) {
         onClick={() => {
           props.setOpenSideBar({ current: 'home' })
         }}
-        className="sidebarButton"
+        className="sidebarClose"
         src={close}
         alt="close"
       ></img>

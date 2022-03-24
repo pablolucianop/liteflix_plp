@@ -22,6 +22,7 @@
   letter-spacing: 4px;
   /* line-height: 20px; */
   padding: auto;
+  background-color: tomato;
 }
 
 .banner_title {
@@ -73,4 +74,23 @@
   margin-right: 12px;
   flex-grow: 0;
   flex-shrink: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .banner_title {
+    margin-top: 268px;
+    text-align: center;
+  }
+  .banner_content {
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0%;
+  }
+  .banner_buttons {
+    flex-direction: column;
+  }
+  .banner {
+    height: 560px;
+  }
 }

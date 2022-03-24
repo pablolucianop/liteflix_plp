@@ -14,7 +14,7 @@
   background-color: rgba(36, 36, 36, 0.9);
   position: fixed;
   top: 0;
-  padding-top: 5em;
+  padding-top: 157px;
   /* margin-right: 7.225%; */
   right: 0%;
   font-size: 22px;
@@ -42,4 +42,11 @@ body {
 .sidebarItem:hover {
   cursor: pointer;
   /* background-color: darkslategray; */
+}
+
+.sidebarClose {
+  position: absolute;
+  top: 43.09px;
+  /* right: 24.8px; */
+  z-index: 2000;
 }
