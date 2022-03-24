@@ -10,7 +10,12 @@ function NavBar({ setOpenSideBar }) {
   let desktop = true
   const logo = <img className="navbar_logo" src={logoImg} alt="logo"></img>
   const addMovie = (
-    <div className="addMovie">
+    <div
+      className="addMovie"
+      onClick={() => {
+        setOpenSideBar({ current: 'upload' })
+      }}
+    >
       <img
         className="plusHvyTrans"
         src={plusHvyTransImg}

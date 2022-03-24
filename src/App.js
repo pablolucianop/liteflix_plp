@@ -48,12 +48,7 @@ function App() {
 
   return (
     <div className="app">
-      <div
-        className="content"
-        onClick={() => {
-          setOpenSideBar({ current: 'upload' })
-        }}
-      >
+      <div className="content">
         <Banner fetchUrl={apiRequests.fetchFeatMovie} movie={featMovie[0]} />
 
         <Col
