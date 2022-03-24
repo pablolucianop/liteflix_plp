@@ -19,6 +19,7 @@ function App() {
     const [openSideBar, setOpenSideBar] = useState({
       current:'none',
     });
+    const [colContent, setColContent] = useState('populares');
     const popularMoviesToShow = 4;
     const baseURL = `https://image.tmdb.org/t/p/w500/`; 
 
@@ -39,8 +40,7 @@ function App() {
     <div className="app"  >
      < div className="content"  onClick={() => {setOpenSideBar({ current: 'upload' })}} >
       <Banner fetchUrl={apiRequests.fetchFeatMovie} movie ={featMovie[0]}  />
-      <Col title='populares' movies={popMovies} 
-      />
+      {colContent==='populares'?<Col title='populares' movies={popMovies}/>:<Col title='mi lista' movies={addedMovies} />}
      </div>
 
 
@@ -48,7 +48,7 @@ function App() {
       {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
       {/* {console.log('info', info)} */}
 
-      <Col title='mi lista' movies={addedMovies} />
+      {/* <Col title='mi lista' movies={addedMovies} /> */}
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
       {/* <colOptions /> */}
