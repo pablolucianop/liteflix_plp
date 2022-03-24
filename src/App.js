@@ -48,7 +48,7 @@ function App() {
       {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
       {/* {console.log('info', info)} */}
 
-      {/* <Col title='mi lista' movies={addedMovies} /> */}
+      <Col title='mi lista' movies={addedMovies} />
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
       {/* <colOptions /> */}
