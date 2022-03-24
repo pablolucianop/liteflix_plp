@@ -78,7 +78,7 @@ function App() {
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
       {/* <colOptions /> */}
-      <NavBar />
+      <NavBar setOpenSideBar={setOpenSideBar} />
       {openSideBar.current === 'sidebar' && (
         <Sidebar setOpenSideBar={setOpenSideBar} />
       )}
