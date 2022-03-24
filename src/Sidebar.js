@@ -2,12 +2,17 @@ import React from 'react';
 import './Sidebar.css';
 import {SidebarData} from './SidebarData'
 import plusHvyTransImg from './img/plusHvyTrans.svg';
-
+import close from './img/close.svg';
 function Sidebar(props) {
     return (
         <div className="sidebar"   >
-
-            <button className="sidebarButton" onClick={()=>{props.setOpenSideBar(false)}}>x</button>
+ 
+        <img 
+            onClick={()=>{props.setOpenSideBar(false)}}
+        className="sidebarButton" 
+        src={close} 
+        alt="close">
+            </img>
             <ul className="sidebarList"> 
                 {SidebarData.map((val, key) => {
                     return(
