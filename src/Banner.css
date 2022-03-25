@@ -30,6 +30,7 @@
   font-size: 76px;
   font-family: BebasNeue;
   font-style: bold;
+  font-weight: bold;
   color: var(--colorAccent);
 }
 
@@ -54,6 +55,7 @@
   border: none;
   font-family: BebasNeue;
   font-size: 18px;
+  letter-spacing: 4px;
 }
 .tagline {
   /* margin-bottom: 16px; */

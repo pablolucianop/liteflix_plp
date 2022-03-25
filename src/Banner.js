@@ -25,9 +25,7 @@ function Banner({ movie, setColContent, minWidthReached }) {
     >
       <div className="container">
         <div className="banner_content">
-          <div className="tagline">
-            original de <b>liteflix</b>
-          </div>
+          <div className="tagline">original de liteflix</div>
           <b className="banner_title">{movie?.title}</b>
           <div className="banner_buttons">
             <button className="banner_button">

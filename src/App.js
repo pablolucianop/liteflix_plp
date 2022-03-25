@@ -86,6 +86,7 @@ function App() {
       )}
       <NavBar
         setOpenSideBar={setOpenSideBar}
+        openSideBar={openSideBar}
         minWidthReached={minWidthReached}
       />
     </div>

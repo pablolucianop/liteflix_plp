@@ -6,7 +6,7 @@ import notificationImg from './img/notification.svg'
 import hamburgerImg from './img/hamburger.svg'
 import plusHvyTransImg from './img/plusHvyTrans.svg'
 
-function NavBar({ setOpenSideBar, minWidthReached }) {
+function NavBar({ setOpenSideBar, openSideBar, minWidthReached }) {
   let desktop = !minWidthReached
   const logo = <img className="navbar_logo" src={logoImg} alt="logo"></img>
   const addMovie = (
@@ -45,12 +45,12 @@ function NavBar({ setOpenSideBar, minWidthReached }) {
     ></img>
   )
 
-  const hamburgerRightMargin = (
-    <img className="hamburgerRightMargin" src={hamburgerImg} alt="menu"></img>
-  )
+  // const hamburgerRightMargin = (
+  //   <img className="hamburgerRightMargin" src={hamburgerImg} alt="menu"></img>
+  // )
   const mobileNav = (
     <div className="navBar">
-      {hamburgerRightMargin}
+      {openSideBar.current !== 'sidebar' && hamburger}
       {logo}
       {avatar}
     </div>
@@ -62,7 +62,7 @@ function NavBar({ setOpenSideBar, minWidthReached }) {
         {addMovie}
       </div>
       <div className="navbar_right">
-        {hamburger}
+        {openSideBar.current !== 'sidebar' && hamburger}
         {notification}
         {avatar}
       </div>
