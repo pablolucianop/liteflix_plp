@@ -72,9 +72,11 @@ function Col({
         {imgArrow}
       </div>
       <div className="col_movies">
+        {/* if there are no movies added, show add movie button */}
         {movies[0] === undefined && (
           <div className="col_no-movies">{addMovie}</div>
         )}
+        {/* regular movie column */}
         {movies.slice(0, numberOfMoviesToShow).map((movie) => (
           <div
             className="movie"
@@ -93,7 +95,7 @@ function Col({
             </div>
             <div className="ratingAndYear">
               <div className="rating">
-                {imgStar}
+                {movie.vote_average && imgStar}
                 {movie.vote_average}
               </div>{' '}
               <div className="year">
