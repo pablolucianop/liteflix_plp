@@ -79,14 +79,15 @@ function App() {
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
       {/* <ColOptions setColContent={setColContent} colContent={colContent} /> */}
-      {focus === 'sidebar' && (
-        <Sidebar setFocus={setFocus} colContent={colContent} />
-      )}
+
       <NavBar
         setFocus={setFocus}
         focus={focus}
         minWidthReached={minWidthReached}
       />
+      {focus === 'sidebar' && (
+        <Sidebar setFocus={setFocus} colContent={colContent} />
+      )}
     </div>
   )
 }

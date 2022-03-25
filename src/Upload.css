@@ -23,7 +23,7 @@
   height: 440px;
   width: 730px;
   background-color: var(--colorDark);
-  z-index: 10;
+  z-index: 1;
 }
 .uploaderTitle {
   color: var(--colorAccent);

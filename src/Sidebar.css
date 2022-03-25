@@ -5,7 +5,7 @@
   background-color: rgba(36, 36, 36, 0.8);
   width: 100vw;
   height: 1000vh;
-  z-index: -10;
+  z-index: -2;
 }
 
 .sidebar {
@@ -48,7 +48,7 @@ body {
   position: absolute;
   top: 43.09px;
   /* right: 24.8px; */
-  z-index: 2000;
+  z-index: 10;
 }
 
 @media screen and (max-width: 728px) {
