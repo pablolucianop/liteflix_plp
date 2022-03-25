@@ -15,9 +15,7 @@ function App() {
   const [featMovie, setFeatMovie] = useState([''])
   const [colContent, setColContent] = useState('populares')
   const [minWidthReached, setminWidthReached] = useState('')
-  const [focus, setFocus] = useState({
-    current: 'home',
-  })
+  const [focus, setFocus] = useState('home')
   const [addedMovies, setaddedMovies] = useState([
     {
       title: 'click aqui para añadir una película',
@@ -67,7 +65,7 @@ function App() {
         />
       </div>
 
-      {focus.current === 'upload' && (
+      {focus === 'upload' && (
         <Upload
           setaddedMovies={setaddedMovies}
           addedMovies={addedMovies}
@@ -81,7 +79,7 @@ function App() {
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
       {/* <ColOptions setColContent={setColContent} colContent={colContent} /> */}
-      {focus.current === 'sidebar' && (
+      {focus === 'sidebar' && (
         <Sidebar setFocus={setFocus} colContent={colContent} />
       )}
       <NavBar

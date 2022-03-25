@@ -13,7 +13,7 @@ function NavBar({ setFocus, focus, minWidthReached }) {
     <div
       className="addMovie"
       onClick={() => {
-        setFocus({ current: 'upload' })
+        setFocus('upload')
       }}
     >
       <img
@@ -40,7 +40,7 @@ function NavBar({ setFocus, focus, minWidthReached }) {
       src={hamburgerImg}
       alt="menu"
       onClick={() => {
-        setFocus({ current: 'sidebar' })
+        setFocus('sidebar')
       }}
     ></img>
   )
@@ -50,7 +50,7 @@ function NavBar({ setFocus, focus, minWidthReached }) {
   // )
   const mobileNav = (
     <div className="navBar">
-      {focus.current !== 'sidebar' && hamburger}
+      {focus !== 'sidebar' && hamburger}
       {logo}
       {avatar}
     </div>
@@ -62,7 +62,7 @@ function NavBar({ setFocus, focus, minWidthReached }) {
         {addMovie}
       </div>
       <div className="navbar_right">
-        {focus.current !== 'sidebar' && hamburger}
+        {focus !== 'sidebar' && hamburger}
         {notification}
         {avatar}
       </div>

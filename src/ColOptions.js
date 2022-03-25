@@ -15,7 +15,7 @@ function ColOptions({ setColContent, colContent, setFocus, focus }) {
               key={key}
               onClick={() => {
                 setColContent(val.link)
-                setFocus({ current: 'home' })
+                setFocus('home')
               }}
             >
               {val.title}

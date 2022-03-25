@@ -50,7 +50,7 @@ function Upload({ setaddedMovies, addedMovies, setFocus }) {
         alt="close"
         onClick={() => {
           // alert('close')
-          setFocus({ current: 'home' })
+          setFocus('home')
         }}
       ></img>
 
