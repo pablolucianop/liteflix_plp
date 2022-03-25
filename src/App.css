@@ -110,7 +110,6 @@ button {
   .content {
     position: relative;
     width: 100%;
-    padding-top: 1em;
     justify-content: center;
   }
 }
