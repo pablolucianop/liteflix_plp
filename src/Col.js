@@ -29,13 +29,7 @@ function Col({
   const imgArrow = (
     <img src={arrow} className="arrow" alt="elegir populares o mi lista"></img>
   )
-  const imgPlayCircle = (
-    <img
-      src={playCircle}
-      className="playCircle"
-      alt="reproducir película"
-    ></img>
-  )
+  const imgPlayCircle = <img src={playCircle} alt="reproducir película"></img>
   const imgStar = <img className="star" src={star} alt="star"></img>
 
   return (
@@ -61,13 +55,19 @@ function Col({
       </div>
       <div className="col_movies">
         {movies.slice(0, popularMoviesToShow).map((movie) => (
-          <div class="movie">
-            <div class="playAndTitle">
-              <div class="play">play</div>
-              <div class="title"> title</div>
+          <div className="movie">
+            <div className="playAndTitle">
+              <div className="playButton">{imgPlayCircle}</div>
+              <div className="title"> {movie.title}</div>
             </div>
-            <div class="ratingAndYear">
-              <div class="rating"> 10</div> <div class="year">1999</div>
+            <div className="ratingAndYear">
+              <div className="rating">
+                {imgStar}
+                {movie.vote_average}
+              </div>{' '}
+              <div className="year">
+                {movie.release_date && movie.release_date.slice(0, 4)}
+              </div>
             </div>
           </div>
         ))}
