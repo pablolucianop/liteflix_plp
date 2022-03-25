@@ -87,6 +87,12 @@
   justify-content: space-between; */
 }
 
+.col_movie:hover {
+  display: flex;
+  margin-bottom: auto;
+  background: rgba(36, 36, 36, 0.7);
+}
+
 .col_movie:hover .title-hover {
   display: flex;
   margin-bottom: auto;

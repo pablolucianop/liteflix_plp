@@ -39,7 +39,7 @@ function Banner({ movie, setColContent, minWidthReached }) {
             <button
               className="banner_button banner_button-secundary"
               onClick={() => {
-                setColContent('mi lista')
+                setColContent('mis peliculas')
               }}
             >
               <img className="plus" src={plus} alt="mi lista"></img>
