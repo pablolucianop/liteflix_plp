@@ -51,6 +51,7 @@ function Col({
       >
         <div className="light">ver:</div>
         {title}
+        {console.log('title', title)}
         {imgArrow}
       </div>
       <div className="col_movies">
@@ -60,7 +61,7 @@ function Col({
             key={movie.id}
             style={{
               backgroundImage:
-                title === 'mi lista'
+                title === 'mis peliculas'
                   ? `${gradient}url(${movie.backdrop_path})`
                   : `${gradient}url(${baseURL}${movie.backdrop_path})`,
             }}

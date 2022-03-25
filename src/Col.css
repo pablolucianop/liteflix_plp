@@ -130,6 +130,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+
   /* width: 88%; */
 }
 .ratingAndYear {
@@ -150,6 +151,7 @@
 .playAndTitle:hover {
   flex-direction: row;
   justify-content: center;
+  transition-timing-function: ease;
 }
 
 .movie:hover .playAndTitle {

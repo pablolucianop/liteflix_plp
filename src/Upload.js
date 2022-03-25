@@ -83,14 +83,14 @@ function Upload({ setaddedMovies, addedMovies, setFocus }) {
       </div>
       <div className="salir">salir</div>
 
-      <div className="previews">
+      {/* <div className="previews">
         {files.map((file) => (
           <div className="preview" key={file.name}>
             <img src={file.preview} alt="{preview}" />
             <button>X</button>
           </div>
         ))}
-      </div>
+      </div> */}
       <div className="backdrop"> </div>
     </div>
   )
