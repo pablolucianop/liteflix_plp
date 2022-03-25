@@ -55,7 +55,16 @@ function Col({
       </div>
       <div className="col_movies">
         {movies.slice(0, popularMoviesToShow).map((movie) => (
-          <div className="movie">
+          <div
+            className="movie"
+            key={movie.id}
+            style={{
+              backgroundImage:
+                title === 'mi lista'
+                  ? `${gradient}url(${movie.backdrop_path})`
+                  : `${gradient}url(${baseURL}${movie.backdrop_path})`,
+            }}
+          >
             <div className="playAndTitle">
               <div className="playButton">{imgPlayCircle}</div>
               <div className="title"> {movie.title}</div>

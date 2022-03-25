@@ -93,7 +93,7 @@
     width: 100%;
     padding-top: 1em;
   }
-  .col_movie {
+  .movie {
     /* height: 146px; */
     min-height: 146px;
     height: 38.9333vw;
@@ -108,8 +108,13 @@
 /* ///// */
 
 .movie {
-  width: 500px;
-  height: 200px;
+  height: 146px;
+  margin-bottom: 10px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   border-radius: 5px;
   background-color: rgb(47, 47, 47);
   padding: 6% 6% 6% 6%;
@@ -118,6 +123,7 @@
   justify-content: center;
   margin: 10px;
 }
+
 .playAndTitle {
   display: flex;
   flex-direction: column;
@@ -131,6 +137,7 @@
   flex-direction: row;
   justify-content: space-between;
   display: none;
+
   /* width: 88%; */
 }
 .title {
