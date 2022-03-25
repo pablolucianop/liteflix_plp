@@ -13,8 +13,8 @@ function Col({
   addedMovies,
   setColContent,
   colContent,
-  setOpenSideBar,
-  openSideBar,
+  setFocus,
+  focus,
 }) {
   const popularMoviesToShow = 4
   const baseURL = `https://image.tmdb.org/t/p/w500/`
@@ -40,19 +40,19 @@ function Col({
 
   return (
     <div className="col">
-      {openSideBar === 'col options' && (
+      {focus === 'col options' && (
         <ColOptions
           setColContent={setColContent}
           colContent={colContent}
-          setOpenSideBar={setOpenSideBar}
-          openSideBar={openSideBar}
+          setFocus={setFocus}
+          focus={focus}
         />
       )}
 
       <div
         className="col_header"
         onClick={() => {
-          setOpenSideBar('col options')
+          setFocus('col options')
         }}
       >
         <div className="light">ver:</div>

@@ -6,14 +6,14 @@ import notificationImg from './img/notification.svg'
 import hamburgerImg from './img/hamburger.svg'
 import plusHvyTransImg from './img/plusHvyTrans.svg'
 
-function NavBar({ setOpenSideBar, openSideBar, minWidthReached }) {
+function NavBar({ setFocus, focus, minWidthReached }) {
   let desktop = !minWidthReached
   const logo = <img className="navbar_logo" src={logoImg} alt="logo"></img>
   const addMovie = (
     <div
       className="addMovie"
       onClick={() => {
-        setOpenSideBar({ current: 'upload' })
+        setFocus({ current: 'upload' })
       }}
     >
       <img
@@ -40,7 +40,7 @@ function NavBar({ setOpenSideBar, openSideBar, minWidthReached }) {
       src={hamburgerImg}
       alt="menu"
       onClick={() => {
-        setOpenSideBar({ current: 'sidebar' })
+        setFocus({ current: 'sidebar' })
       }}
     ></img>
   )
@@ -50,7 +50,7 @@ function NavBar({ setOpenSideBar, openSideBar, minWidthReached }) {
   // )
   const mobileNav = (
     <div className="navBar">
-      {openSideBar.current !== 'sidebar' && hamburger}
+      {focus.current !== 'sidebar' && hamburger}
       {logo}
       {avatar}
     </div>
@@ -62,7 +62,7 @@ function NavBar({ setOpenSideBar, openSideBar, minWidthReached }) {
         {addMovie}
       </div>
       <div className="navbar_right">
-        {openSideBar.current !== 'sidebar' && hamburger}
+        {focus.current !== 'sidebar' && hamburger}
         {notification}
         {avatar}
       </div>

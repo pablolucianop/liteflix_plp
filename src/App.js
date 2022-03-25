@@ -15,7 +15,7 @@ function App() {
   const [featMovie, setFeatMovie] = useState([''])
   const [colContent, setColContent] = useState('populares')
   const [minWidthReached, setminWidthReached] = useState('')
-  const [openSideBar, setOpenSideBar] = useState({
+  const [focus, setFocus] = useState({
     current: 'home',
   })
   const [addedMovies, setaddedMovies] = useState([
@@ -62,16 +62,16 @@ function App() {
           addedMovies={addedMovies}
           setColContent={setColContent}
           colContent={colContent}
-          setOpenSideBar={setOpenSideBar}
-          openSideBar={openSideBar}
+          setFocus={setFocus}
+          focus={focus}
         />
       </div>
 
-      {openSideBar.current === 'upload' && (
+      {focus.current === 'upload' && (
         <Upload
           setaddedMovies={setaddedMovies}
           addedMovies={addedMovies}
-          setOpenSideBar={setOpenSideBar}
+          setFocus={setFocus}
         />
       )}
       {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
@@ -81,12 +81,12 @@ function App() {
       {/* <Col title='mis películas' fetchUrl={indo} /> */}
       {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
       {/* <ColOptions setColContent={setColContent} colContent={colContent} /> */}
-      {openSideBar.current === 'sidebar' && (
-        <Sidebar setOpenSideBar={setOpenSideBar} colContent={colContent} />
+      {focus.current === 'sidebar' && (
+        <Sidebar setFocus={setFocus} colContent={colContent} />
       )}
       <NavBar
-        setOpenSideBar={setOpenSideBar}
-        openSideBar={openSideBar}
+        setFocus={setFocus}
+        focus={focus}
         minWidthReached={minWidthReached}
       />
     </div>

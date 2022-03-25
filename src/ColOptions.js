@@ -3,12 +3,7 @@ import './ColOptions.css'
 import { colData } from './colData'
 import check from './img/check.svg'
 
-function ColOptions({
-  setColContent,
-  colContent,
-  setOpenSideBar,
-  openSideBar,
-}) {
+function ColOptions({ setColContent, colContent, setFocus, focus }) {
   const SidebarOptionsArr = colData
   return (
     <div className="colOptions">
@@ -20,7 +15,7 @@ function ColOptions({
               key={key}
               onClick={() => {
                 setColContent(val.link)
-                setOpenSideBar({ current: 'home' })
+                setFocus({ current: 'home' })
               }}
             >
               {val.title}

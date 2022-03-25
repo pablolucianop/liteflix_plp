@@ -48,7 +48,7 @@ function Sidebar(props) {
     <div className="sidebar">
       <img
         onClick={() => {
-          props.setOpenSideBar({ current: 'home' })
+          props.setFocus({ current: 'home' })
         }}
         className="sidebarClose"
         src={close}
@@ -62,7 +62,7 @@ function Sidebar(props) {
               className="sidebarItem light"
               key={key}
               onClick={() => {
-                props.setOpenSideBar({ current: val.link })
+                props.setFocus({ current: val.link })
               }}
             >
               {val.icon && (

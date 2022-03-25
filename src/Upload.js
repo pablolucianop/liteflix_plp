@@ -4,7 +4,7 @@ import clip from './img/clip.svg'
 import close from './img/close.svg'
 import './Upload.css'
 
-function Upload({ setaddedMovies, addedMovies, setOpenSideBar }) {
+function Upload({ setaddedMovies, addedMovies, setFocus }) {
   const [name, setName] = useState('')
   const [files, setFiles] = useState([])
   const [uploadedMovies, setUploadedMovies] = useState([])
@@ -50,7 +50,7 @@ function Upload({ setaddedMovies, addedMovies, setOpenSideBar }) {
         alt="close"
         onClick={() => {
           // alert('close')
-          setOpenSideBar({ current: 'home' })
+          setFocus({ current: 'home' })
         }}
       ></img>
 
