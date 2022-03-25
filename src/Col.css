@@ -59,10 +59,7 @@
   height: 146px;
   margin-bottom: 10px;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /* background-size: auto; */
+  display: flex;
   border-radius: 5px;
   background-color: rgb(47, 47, 47, 0.8);
   /* max-width: 327px; */

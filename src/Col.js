@@ -4,6 +4,7 @@ import playCircle from './img/playCircle.svg'
 import star from './img/star.svg'
 import arrow from './img/arrow.svg'
 import ColOptions from './ColOptions'
+import plusHvyTransImg from './img/plusHvyTrans.svg'
 
 // import { info } from './info'
 
@@ -21,6 +22,22 @@ function Col({
   const gradient =
     'linear-gradient(180deg, rgba(0, 0, 0, 0) 50.78%, #000000 122.69%),'
   let movies = popMovies
+
+  const addMovie = (
+    <div
+      className="addMovie"
+      onClick={() => {
+        setFocus('upload')
+      }}
+    >
+      <img
+        className="plusHvyTrans"
+        src={plusHvyTransImg}
+        alt="Agregar película"
+      ></img>
+      agregar película
+    </div>
+  )
 
   //change the movies to show depending on the title of the column
   title === 'populares' ? (movies = popMovies) : (movies = addedMovies)
@@ -56,7 +73,7 @@ function Col({
       </div>
       <div className="col_movies">
         {movies[0] === undefined && (
-          <div className="col_no-movies">No hay películas en esta columna</div>
+          <div className="col_no-movies">{addMovie}</div>
         )}
         {movies.slice(0, numberOfMoviesToShow).map((movie) => (
           <div
