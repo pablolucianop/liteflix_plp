@@ -68,7 +68,7 @@ function Col({
       >
         <div className="light">ver:</div>
         <b>{title}</b>
-        {console.log('title', title)}
+        {/* {console.log('title', title)} */}
         {imgArrow}
       </div>
       <div className="col_movies">

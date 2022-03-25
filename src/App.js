@@ -6,7 +6,7 @@ import apiRequests from './apiRequests'
 import Banner from './Banner'
 import NavBar from './NavBar'
 import Sidebar from './Sidebar'
-import BreakingPoint from './BreakingPoint'
+// import BreakingPoint from './BreakingPoint'
 import './fonts.css'
 import Upload from './Upload'
 
@@ -14,7 +14,7 @@ function App() {
   const [popMovies, setMovies] = useState([])
   const [featMovie, setFeatMovie] = useState([''])
   const [colContent, setColContent] = useState('populares')
-  const [minWidthReached, setminWidthReached] = useState('')
+  const [minWidthReached, setminWidthReached] = useState(false)
   const [focus, setFocus] = useState('home')
   const [addedMovies, setaddedMovies] = useState([
     // {
@@ -24,8 +24,16 @@ function App() {
     //   backdrop_path: '',
     // },
   ])
+  const breakingPointPixelsNumber = 600
+
+  function handleResize() {
+    setminWidthReached(window.innerWidth < breakingPointPixelsNumber)
+  }
 
   useEffect(() => {
+    window.addEventListener('resize', handleResize)
+    handleResize()
+
     async function fetchData() {
       const requestPopMovies = await axios.get(apiRequests.fetchPopMovies)
       const requestFeatMovie = await axios.get(apiRequests.fetchFeatMovie)
@@ -47,7 +55,7 @@ function App() {
   return (
     <div className="app">
       <div className="content">
-        <BreakingPoint setminWidthReached={setminWidthReached} />
+        {/* <BreakingPoint setminWidthReached={setminWidthReached} /> */}
         <Banner
           movie={featMovie[0]}
           setColContent={setColContent}

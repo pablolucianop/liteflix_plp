@@ -11,7 +11,7 @@ function Banner({ movie, setColContent, minWidthReached }) {
   const gradientTop =
     'linear-gradient(0deg, rgba(0, 0, 0, 0) 90%, #000000 122.69%)'
   const gradient = minWidthReached ? gradientBottom : gradientTop
-  console.log('minWidthReached', minWidthReached)
+  // console.log('minWidthReached', minWidthReached)
 
   return (
     <header
