@@ -59,7 +59,7 @@ function Sidebar(props) {
           return (
             // {nav.var}
             <li
-              className="sidebarItem light"
+              className="sidebarItem"
               key={key}
               onClick={() => {
                 props.setFocus(val.link)
@@ -72,7 +72,7 @@ function Sidebar(props) {
                   alt="Agregar película"
                 />
               )}
-              {val.title}
+              {val.icon ? <b>{val.title}</b> : val.title}
             </li>
           )
         })}

@@ -16,7 +16,7 @@ function Col({
   setFocus,
   focus,
 }) {
-  const popularMoviesToShow = 4
+  const numberOfMoviesToShow = 4
   const baseURL = `https://image.tmdb.org/t/p/w500/`
   const gradient =
     'linear-gradient(180deg, rgba(0, 0, 0, 0) 50.78%, #000000 122.69%),'
@@ -55,7 +55,13 @@ function Col({
         {imgArrow}
       </div>
       <div className="col_movies">
-        {movies.slice(0, popularMoviesToShow).map((movie) => (
+        {movies[0] === undefined && (
+          <div className="col_no-movies">
+            <br />
+            <b>No hay películas en esta columna </b>
+          </div>
+        )}
+        {movies.slice(0, numberOfMoviesToShow).map((movie) => (
           <div
             className="movie"
             key={movie.id}
