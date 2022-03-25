@@ -4,8 +4,12 @@ import plusHvyTransImg from './img/plusHvyTrans.svg'
 import close from './img/close.svg'
 import { sidebarData } from './sidebarData'
 
+import { Spring } from 'react-spring'
+
 function Sidebar(props) {
   return (
+    //spring animation appear from the right
+
     <div className="sidebar">
       <img
         onClick={() => {

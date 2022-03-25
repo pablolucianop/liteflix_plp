@@ -3,7 +3,7 @@ import './Banner.css'
 import play from './img/play.svg'
 import plus from './img/plus.svg'
 
-function Banner({ movie, setColContent, minWidthReached }) {
+function Banner({ movie, setColContent, minWidthReached, setFocus }) {
   if (movie.backdrop_path === undefined) return null
 
   const baseURL = `https://image.tmdb.org/t/p/w500/`
@@ -23,6 +23,10 @@ function Banner({ movie, setColContent, minWidthReached }) {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'right',
+      }}
+      //to let navigate until clickaway function is working
+      onClick={() => {
+        setFocus('home')
       }}
     >
       <div className="container">
