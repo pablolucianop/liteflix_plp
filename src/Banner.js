@@ -4,6 +4,8 @@ import play from './img/play.svg'
 import plus from './img/plus.svg'
 
 function Banner({ movie, setColContent, minWidthReached }) {
+  if (movie.backdrop_path === undefined) return null
+
   const baseURL = `https://image.tmdb.org/t/p/w500/`
 
   const gradientBottom =
@@ -17,7 +19,7 @@ function Banner({ movie, setColContent, minWidthReached }) {
     <header
       className="banner"
       style={{
-        backgroundImage: `${gradient} , url(${baseURL}${movie?.backdrop_path})`,
+        backgroundImage: `${gradient} , url(${baseURL}${movie.backdrop_path})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'right',
