@@ -17,12 +17,12 @@ function App() {
   const [minWidthReached, setminWidthReached] = useState('')
   const [focus, setFocus] = useState('home')
   const [addedMovies, setaddedMovies] = useState([
-    {
-      title: 'click aqui para añadir una película',
-      id: '',
-      poster_path: '',
-      backdrop_path: '',
-    },
+    // {
+    //   title: 'click aqui para añadir una película',
+    //   id: '',
+    //   poster_path: '',
+    //   backdrop_path: '',
+    // },
   ])
 
   useEffect(() => {
