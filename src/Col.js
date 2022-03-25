@@ -50,7 +50,7 @@ function Col({
         }}
       >
         <div className="light">ver:</div>
-        {title}
+        <b>{title}</b>
         {console.log('title', title)}
         {imgArrow}
       </div>
