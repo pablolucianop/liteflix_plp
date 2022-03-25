@@ -61,29 +61,13 @@ function Col({
       </div>
       <div className="col_movies">
         {movies.slice(0, popularMoviesToShow).map((movie) => (
-          <div
-            className="col_movie"
-            key={movie.id}
-            style={{
-              backgroundImage:
-                title === 'mi lista'
-                  ? `${gradient}url(${movie.backdrop_path})`
-                  : `${gradient}url(${baseURL}${movie.backdrop_path})`,
-            }}
-          >
-            <div className="central_movie">
-              {imgPlayCircle}
-              <div className="title-hover">{movie.title}</div>
+          <div class="movie">
+            <div class="playAndTitle">
+              <div class="play">play</div>
+              <div class="title"> title</div>
             </div>
-            <h3 className="titleMovie light">{movie.title}</h3>
-            <div className="extraInfo">
-              {movie.vote_average && (
-                <div className="average">
-                  {imgStar}
-                  {movie.vote_average}
-                </div>
-              )}
-              {movie.release_date && movie.release_date.slice(0, 4)}
+            <div class="ratingAndYear">
+              <div class="rating"> 10</div> <div class="year">1999</div>
             </div>
           </div>
         ))}
@@ -93,3 +77,29 @@ function Col({
 }
 
 export default Col
+
+// <div
+//   className="col_movie"
+//   key={movie.id}
+//   style={{
+//     backgroundImage:
+//       title === 'mi lista'
+//         ? `${gradient}url(${movie.backdrop_path})`
+//         : `${gradient}url(${baseURL}${movie.backdrop_path})`,
+//   }}
+// >
+//   <div className="central_movie">
+//     {imgPlayCircle}
+//     <div className="title-hover">{movie.title}</div>
+//   </div>
+//   <h3 className="titleMovie light">{movie.title}</h3>
+//   <div className="extraInfo">
+//     {movie.vote_average && (
+//       <div className="average">
+//         {imgStar}
+//         {movie.vote_average}
+//       </div>
+//     )}
+//     {movie.release_date && movie.release_date.slice(0, 4)}
+//   </div>
+// </div>
