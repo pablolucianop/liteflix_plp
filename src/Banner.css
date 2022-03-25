@@ -29,7 +29,7 @@
 }
 
 .banner_title {
-  font-size: 76px;
+  font-size: 120px;
   font-family: BebasNeue;
   font-style: bold;
   font-weight: bold;
@@ -60,7 +60,7 @@
   letter-spacing: 4px;
 }
 .tagline {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .banner_button-secundary {
