@@ -7,7 +7,7 @@ import Banner from './Banner'
 import NavBar from './NavBar'
 import Sidebar from './Sidebar'
 import BreakingPoint from './BreakingPoint'
-import './App.css'
+import './fonts.css'
 import Upload from './Upload'
 
 function App() {

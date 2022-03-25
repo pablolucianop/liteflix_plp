@@ -16,6 +16,8 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: BebasNeue;
+  font-style: normal;
 }
 
 body {
@@ -24,6 +26,7 @@ body {
   font-size: 1rem;
   letter-spacing: 0.25rem;
   background-color: var(--colorDark);
+
   /* line-height: 1.125rem; */
 }
 
@@ -63,19 +66,19 @@ h2 {
   background-color: var(--colorDark);
 }
 
-@font-face {
+/* @font-face {
   font-family: 'BebasNeue-Thin';
-  src: local('BebasNeue'), url(./fonts/BebasNeue-Thin.ttf) format('truetype');
+  src: local('BebasNeue'), url(./fonts/BebasNeue-Thin.otf) format('truetype');
 }
 
 @font-face {
   font-family: 'BebasNeue-Bold';
-  src: local('BebasNeue'), url(./fonts/BebasNeue-Bold.ttf) format('truetype');
+  src: local('BebasNeue'), url(./fonts/BebasNeue-Bold.otf) format('truetype');
 }
 @font-face {
   font-family: 'BebasNeue-Regular';
-  src: local('BebasNeue'), url(./fonts/BebasNeue-Regular.ttf) format('truetype');
-}
+  src: local('BebasNeue'), url(./fonts/BebasNeue-Regular.otf) format('truetype');
+} */
 
 p {
   font-family: -apple-system, BebasNeue-Regular;
@@ -84,7 +87,7 @@ b {
   font-family: -apple-system, BebasNeue-Bold;
 }
 .light {
-  font-family: -apple-system, BebasNeue-Thin;
+  font-family: -apple-system, BebasNeue;
 }
 
 code {

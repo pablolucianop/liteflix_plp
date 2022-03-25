@@ -92,11 +92,15 @@
     position: relative;
     width: 100%;
     padding-top: 1em;
-    margin-right: 0%;
   }
   .col_movie {
     /* height: 146px; */
     min-height: 146px;
     height: 38.9333vw;
+  }
+  .col {
+    width: 93.16vw;
+    margin-left: 2%;
+    margin-right: 2%;
   }
 }

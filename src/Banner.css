@@ -4,8 +4,8 @@
   /* height: 448px;
   width: 200px; */
   width: 100%;
-  min-height: 70vh;
   height: 100vh;
+  min-height: 562px;
 }
 .banner_content {
   display: flex;
@@ -28,7 +28,8 @@
 
 .banner_title {
   font-size: 76px;
-  font-weight: bold;
+  font-family: BebasNeue;
+  font-style: bold;
   color: var(--colorAccent);
 }
 
@@ -51,7 +52,7 @@
   background-color: #242424;
   color: white;
   border: none;
-  font-family: BebasNeue-Thin;
+  font-family: BebasNeue;
   font-size: 18px;
 }
 .tagline {
@@ -93,8 +94,9 @@
     flex-direction: column;
   }
   .banner {
-    height: 560px;
+    min-height: 562px;
     background-size: 10%;
+
     /* background-size: 20%; */
   }
 }
