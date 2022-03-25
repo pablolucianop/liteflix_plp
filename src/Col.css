@@ -132,6 +132,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  /* margin-bottom: auto; */
+  /* background-color: burlywood; */
 
   /* width: 88%; */
 }
@@ -140,26 +142,42 @@
   flex-direction: row;
   justify-content: space-between;
   display: none;
+  font-size: 12px;
+  /* background-color: crimson; */
+  /* position: fixed; */
 
   /* width: 88%; */
 }
 .title {
-  /* width: 100%; */
-}
-.playButton {
-  width: 100px;
+  font-size: 16px;
+  /* background-color: chocolate; */
 }
 
-.playAndTitle:hover {
-  flex-direction: row;
-  justify-content: center;
-  transition-timing-function: ease;
+.star {
+  margin-right: 6px;
+}
+.movie:hover {
+  display: flex;
 }
 
+.movie:hover .futureTag {
+  height: 10%;
+}
+.movie:hover .title {
+  text-align: left;
+  margin-left: 6px;
+}
 .movie:hover .playAndTitle {
+  transition-timing-function: ease;
+  /* background-color: burlywood; */
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  height: 80%;
 }
 .movie:hover .ratingAndYear {
   display: flex;
+  position: relative;
+  bottom: 0%;
+  height: 10%;
 }
