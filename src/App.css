@@ -67,26 +67,13 @@ h2 {
   background-color: var(--colorDark);
 }
 
-/* @font-face {
-  font-family: 'BebasNeue-Thin';
-  src: local('BebasNeue'), url(./fonts/BebasNeue-Thin.otf) format('truetype');
-}
-
-@font-face {
-  font-family: 'BebasNeue-Bold';
-  src: local('BebasNeue'), url(./fonts/BebasNeue-Bold.otf) format('truetype');
-}
-@font-face {
-  font-family: 'BebasNeue-Regular';
-  src: local('BebasNeue'), url(./fonts/BebasNeue-Regular.otf) format('truetype');
-} */
-
-p {
+/* p {
   font-family: -apple-system, BebasNeue-Regular;
-}
+} */
 b {
-  font-family: -apple-system, BebasNeue-Bold;
+  font-weight: 700;
 }
+
 .light {
   font-family: -apple-system, BebasNeue;
 }

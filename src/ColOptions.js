@@ -18,8 +18,14 @@ function ColOptions({ setColContent, colContent, setFocus, focus }) {
                 setFocus('home')
               }}
             >
-              {val.title}
-              {val.link === colContent && <img src={check} alt="checkmark" />}
+              {val.link === colContent ? (
+                <b>
+                  {val.title}
+                  <img src={check} alt="checkmark" />
+                </b>
+              ) : (
+                val.title
+              )}
             </li>
           )
         })}

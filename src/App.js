@@ -30,7 +30,6 @@ function App() {
       const requestPopMovies = await axios.get(apiRequests.fetchPopMovies)
       const requestFeatMovie = await axios.get(apiRequests.fetchFeatMovie)
 
-      console.log('minWidthReached', minWidthReached)
       //if the first feature movie is the same as the first popular movie, then we need to get the next one
       if (
         requestPopMovies.data.results[0].id ===

@@ -12,7 +12,6 @@ function BreakingPoint({ setminWidthReached }) {
         setminWidthReached(false)
       }
     }
-
     window.addEventListener('resize', handleResize)
   })
 
