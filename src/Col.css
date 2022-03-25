@@ -12,6 +12,9 @@
   position: absolute;
   top: 10px;
 }
+.col_movies {
+  padding-top: 10px;
+}
 .col_movie {
   height: 146px;
   margin-bottom: 10px;
@@ -53,6 +56,7 @@
   text-align: center; */
 }
 .col_no-movies {
+  margin-top: 10px;
   background-color: rgba(47, 47, 47, 0.7);
   padding: 10px;
   border-radius: 5px;
@@ -61,6 +65,7 @@
   width: 100%;
   display: flex;
   border-radius: 5px;
+
   background-color: rgb(47, 47, 47, 0.8);
   /* max-width: 327px; */
   /* border: 1px solid rgb(47, 47, 47); */
