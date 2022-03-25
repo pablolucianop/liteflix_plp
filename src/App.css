@@ -105,3 +105,12 @@ button {
   flex-wrap: wrap;
   justify-content: right;
 }
+
+@media screen and (max-width: 600px) {
+  .content {
+    position: relative;
+    width: 100%;
+    padding-top: 1em;
+    justify-content: center;
+  }
+}

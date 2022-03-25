@@ -6,9 +6,10 @@ import apiRequests from './apiRequests'
 import Banner from './Banner'
 import NavBar from './NavBar'
 import Sidebar from './Sidebar'
-// import BreakingPoint from './BreakingPoint'
+// import Anim from './Anim'
 import './fonts.css'
 import Upload from './Upload'
+import { Spring } from 'react-spring'
 
 function App() {
   const [popMovies, setMovies] = useState([])
@@ -56,12 +57,14 @@ function App() {
     <div className="app">
       <div className="content">
         {/* <BreakingPoint setminWidthReached={setminWidthReached} /> */}
+        {/* <Anim /> */}
         <Banner
           movie={featMovie[0]}
           setColContent={setColContent}
           minWidthReached={minWidthReached}
           setFocus={setFocus}
         />
+
         <Col
           title={colContent}
           popMovies={popMovies}
