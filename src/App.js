@@ -60,6 +60,7 @@ function App() {
           movie={featMovie[0]}
           setColContent={setColContent}
           minWidthReached={minWidthReached}
+          setFocus={setFocus}
         />
         <Col
           title={colContent}
