@@ -6,7 +6,7 @@ import notificationImg from './img/notification.svg'
 import hamburgerImg from './img/hamburger.svg'
 import plusHvyTransImg from './img/plusHvyTrans.svg'
 
-function NavBar({ setFocus, focus, minWidthReached }) {
+function NavBar({ setFocus, focus, minWidthReached, overSidebar }) {
   let desktop = !minWidthReached
   const logo = <img className="navbar_logo" src={logoImg} alt="logo"></img>
   const addMovie = (
@@ -55,7 +55,7 @@ function NavBar({ setFocus, focus, minWidthReached }) {
       {avatar}
     </div>
   )
-  const desktopNav = (
+  const desktopNavStandard = (
     <div className="navBar">
       <div className="navbar_left">
         {logo}
@@ -68,6 +68,21 @@ function NavBar({ setFocus, focus, minWidthReached }) {
       </div>
     </div>
   )
+
+  const desktopNavOverSidebar = (
+    <div className="navBarOver">
+      <div className="navbar_left">
+        {/* {logo}
+          {addMovie} */}
+      </div>
+      <div className="navbar_right">
+        {notification}
+        {avatar}
+      </div>
+    </div>
+  )
+
+  const desktopNav = overSidebar ? desktopNavOverSidebar : desktopNavStandard
 
   return <div className="container">{desktop ? desktopNav : mobileNav}</div>
 }

@@ -20,6 +20,7 @@
   font-size: 22px;
   padding-left: 88px;
   height: 100%;
+  z-index: 10;
 }
 
 body {
