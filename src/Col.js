@@ -56,10 +56,7 @@ function Col({
       </div>
       <div className="col_movies">
         {movies[0] === undefined && (
-          <div className="col_no-movies">
-            <br />
-            <b>No hay películas en esta columna </b>
-          </div>
+          <div className="col_no-movies">No hay películas en esta columna</div>
         )}
         {movies.slice(0, numberOfMoviesToShow).map((movie) => (
           <div

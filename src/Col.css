@@ -52,7 +52,23 @@
   /* justify-content: center;
   text-align: center; */
 }
-
+.col_no-movies {
+  background-color: rgba(47, 47, 47, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  height: 146px;
+  margin-bottom: 10px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-size: auto; */
+  border-radius: 5px;
+  background-color: rgb(47, 47, 47, 0.8);
+  /* max-width: 327px; */
+  /* border: 1px solid rgb(47, 47, 47); */
+  text-align: center;
+}
 .col_header {
   display: flex;
   flex-direction: row;
