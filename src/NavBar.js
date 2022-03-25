@@ -84,7 +84,17 @@ function NavBar({ setFocus, focus, minWidthReached, overSidebar }) {
 
   const desktopNav = overSidebar ? desktopNavOverSidebar : desktopNavStandard
 
-  return <div className="container">{desktop ? desktopNav : mobileNav}</div>
+  return (
+    <div
+      className="container"
+      onClick={() => {
+        // setFocus('home')
+        console.log('clicked nav bar')
+      }}
+    >
+      {desktop ? desktopNav : mobileNav}
+    </div>
+  )
 }
 
 export default NavBar

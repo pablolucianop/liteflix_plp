@@ -72,3 +72,10 @@
 .navbar_logo {
   width: 113px;
 }
+
+@media screen and (max-width: 600px) {
+  /* flip horizonally */
+  .hamburger {
+    transform: scaleX(-1);
+  }
+}

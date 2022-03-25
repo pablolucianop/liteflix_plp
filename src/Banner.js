@@ -33,6 +33,7 @@ function Banner({ movie, setColContent, minWidthReached, setFocus }) {
         className="container"
         onClick={() => {
           setFocus('home')
+          // console.log('clicked')
         }}
       >
         <div className="banner_content">
