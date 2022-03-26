@@ -7,7 +7,12 @@ function ColOptions({ setColContent, colContent, setFocus, focus }) {
   const SidebarOptionsArr = colData
   return (
     <div className="colOptions">
-      <div className="square"></div>
+      <div
+        className="square"
+        style={{
+          right: colContent === 'mis peliculas' && '25px',
+        }}
+      ></div>
       <ul>
         {SidebarOptionsArr.map((val, key) => {
           return (
