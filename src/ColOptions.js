@@ -21,7 +21,7 @@ function ColOptions({ setColContent, colContent, setFocus, focus }) {
               {val.link === colContent ? (
                 <b>
                   {val.title}
-                  <img src={check} alt="checkmark" />
+                  <img src={check} alt="checkmark" className="checkmark" />
                 </b>
               ) : (
                 val.title

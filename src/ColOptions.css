@@ -24,6 +24,10 @@ li {
   justify-content: space-between;
   margin-bottom: 16px;
 }
+.checkmark {
+  position: absolute;
+  right: 24px;
+}
 
 @media screen and (max-width: 600px) {
   .colOptions {
