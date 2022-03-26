@@ -137,6 +137,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+
   /* margin-bottom: auto; */
   /* background-color: burlywood; */
 
@@ -148,6 +149,7 @@
   justify-content: space-between;
   display: none;
   font-size: 12px;
+  transition: all 0.3s ease;
   /* background-color: crimson; */
   /* position: fixed; */
 
@@ -155,12 +157,13 @@
 }
 .title {
   font-size: 16px;
+  transition: all 0.5s ease;
   /* background-color: chocolate; */
 }
+/* .playbutton {
+  transition: all 0.3s ease;
+} */
 
-.star {
-  margin-right: 6px;
-}
 .movie:hover {
   display: flex;
 }
@@ -173,7 +176,6 @@
   margin-left: 6px;
 }
 .movie:hover .playAndTitle {
-  transition-timing-function: ease;
   /* background-color: burlywood; */
   flex-direction: row;
   justify-content: center;

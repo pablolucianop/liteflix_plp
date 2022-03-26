@@ -56,6 +56,12 @@ body {
   /* background-color: darkslategray; */
 }
 
+.sidebarItemIcon {
+  margin-right: 16px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
 .sidebarClose {
   position: absolute;
   top: 43.09px;
