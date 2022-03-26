@@ -42,6 +42,7 @@ function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
       </div>
     </div>
   ))
+
   return (
     <div className="upload">
       <img
@@ -78,7 +79,16 @@ function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
           onChange={(e) => setName(e.target.value)}
         />
       </label>
-      <div className="upload-button" onClick={handleSubmit}>
+      {console.log('files', files, files.length)}
+      <div
+        className="upload-button"
+        onClick={handleSubmit}
+        style={{
+          backgroundColor: files.length > 0 ? '#ffffff' : '#919191',
+          pointerEvents: files.length > 0 ? 'auto' : 'none',
+          cursor: files.length > 0 ? 'auto' : 'default',
+        }}
+      >
         subir Película
       </div>
       <div
@@ -89,7 +99,6 @@ function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
       >
         salir
       </div>
-      {console.log('files', files)}
 
       {/* <div className="previews">
         {files.map((file) => (

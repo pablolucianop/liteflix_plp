@@ -58,7 +58,7 @@
   justify-content: center;
   width: 284px;
   height: 56px;
-  background-color: #919191;
+  /* background-color: #919191; */
   color: var(--colorDark);
   border: none;
   font-family: BebasNeue;
