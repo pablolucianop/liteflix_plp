@@ -38,6 +38,10 @@
   width: 602px;
   border: 1px dashed #ffffff;
 }
+
+.dropzone:hover {
+  background-color: aliceblue;
+}
 .closeBtn {
   width: 15px;
   right: 24px;

@@ -8,7 +8,9 @@
   z-index: -2;
   pointer-events: none;
 }
-
+li {
+  list-style: none;
+}
 .sidebar {
   width: clamp(50vw, 750px, 750px);
   /* height: 100vh; */
@@ -33,6 +35,9 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
 }
 
 .sidebarItem {
@@ -42,6 +47,8 @@ body {
   align-items: center;
   margin: 0;
   margin-bottom: 42px;
+  justify-content: left;
+  padding-right: 6px;
 }
 
 .sidebarItem:hover {
