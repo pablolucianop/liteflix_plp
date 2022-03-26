@@ -44,15 +44,18 @@
 .hamburger {
   width: 27px;
   margin-right: 20px;
+  pointer-events: auto;
 }
 .notification {
   width: 24dpx;
   margin-right: 20px;
   margin-left: 20px;
+  pointer-events: auto;
 }
 .avatar {
   width: 40px;
   border-radius: 50%;
+  pointer-events: auto;
 }
 .navbar_logo {
   width: 113px;
@@ -63,6 +66,7 @@
   align-items: center;
   margin-left: 64px;
   font-weight: bold;
+  pointer-events: auto;
 }
 .plusHvyTrans {
   width: 14px;
