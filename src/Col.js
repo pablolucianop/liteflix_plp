@@ -69,42 +69,47 @@ function Col({
       >
         <div className="light">ver:</div>
         <b>{title}</b>
-        {/* {console.log('title', title)} */}
         {imgArrow}
       </div>
       <div className="col_movies">
-        {/* if there are no movies added, show add movie button */}
-        {movies[0] === undefined && (
-          <div className="col_no-movies">{addMovie}</div>
-        )}
-        {/* regular movie column */}
-        {movies.slice(0, numberOfMoviesToShow).map((movie) => (
-          <div
-            className="movie"
-            key={movie.id}
-            style={{
-              backgroundImage:
-                title === 'mis peliculas'
-                  ? `${gradient}url(${movie.backdrop_path})`
-                  : `${gradient}url(${baseURL}${movie.backdrop_path})`,
-            }}
-          >
-            <div className="futureTag"></div>
-            <div className="playAndTitle">
-              <div className="playButton">{imgPlayCircle}</div>
-              <div className="title"> {movie.title}</div>
-            </div>
-            <div className="ratingAndYear">
-              <div className="rating">
-                {movie.vote_average && imgStar}
-                {movie.vote_average}
-              </div>{' '}
-              <div className="year">
-                {movie.release_date && movie.release_date.slice(0, 4)}
+        {}
+        {
+          // if there are no movies added, show add movie button
+          movies[0] === undefined && (
+            <div className="col_no-movies">{addMovie}</div>
+          )
+        }
+
+        {
+          // regular movie column
+          movies.slice(0, numberOfMoviesToShow).map((movie) => (
+            <div
+              className="movie"
+              key={movie.id}
+              style={{
+                backgroundImage:
+                  title === 'mis peliculas'
+                    ? `${gradient}url(${movie.backdrop_path})`
+                    : `${gradient}url(${baseURL}${movie.backdrop_path})`,
+              }}
+            >
+              <div className="futureTag"></div>
+              <div className="playAndTitle">
+                <div className="playButton">{imgPlayCircle}</div>
+                <div className="title"> {movie.title}</div>
+              </div>
+              <div className="ratingAndYear">
+                <div className="rating">
+                  {movie.vote_average && imgStar}
+                  {movie.vote_average}
+                </div>{' '}
+                <div className="year">
+                  {movie.release_date && movie.release_date.slice(0, 4)}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   )
