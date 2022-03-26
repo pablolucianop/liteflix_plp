@@ -132,13 +132,28 @@
   position: relative;
 }
 
-.opaque {
-  position: absolute;
-  height: 100%;
+.movieInner {
+  height: 146px;
+  margin-bottom: 10px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  border-radius: 4px;
+  background-color: rgb(47, 47, 47);
+  padding: 6% 6% 6% 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 10px; */
+  position: relative;
+}
+
+.opaque {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   border-radius: 4px;
   background-color: var(--colorDark);
   display: flex;
@@ -147,7 +162,7 @@
   z-index: -1;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 1;
   transition: all 0.5s ease-in-out;
 }
 
