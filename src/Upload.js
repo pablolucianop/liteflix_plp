@@ -81,6 +81,14 @@ function Upload({ setaddedMovies, addedMovies, setFocus }) {
       <div className="upload-button" onClick={handleSubmit}>
         subir Película
       </div>
+      <div
+        className=" upload-button exit"
+        onClick={() => {
+          setFocus('home')
+        }}
+      >
+        salir
+      </div>
       {/* <div className="salir">salir</div> */}
 
       {/* <div className="previews">

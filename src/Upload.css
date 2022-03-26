@@ -60,6 +60,11 @@
   font-family: BebasNeue;
   font-size: 18px;
 }
+.exit {
+  background-color: var(--colorDark);
+  border: 1px solid var(--colorBase);
+  color: var(--colorBase);
+}
 
 .minimal-input {
   -webkit-transition: all 125ms ease-out 125ms;
@@ -124,6 +129,17 @@ input[type='text'] {
 
 @media screen and (max-width: 600px) {
   /* flip horizonally */
+  .upload {
+    height: 100%;
+    top: auto;
+    left: auto;
+    margin-top: auto;
+    margin-left: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
   .dropHere {
     width: 80%;
   }
@@ -132,5 +148,8 @@ input[type='text'] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .closeBtn {
+    display: none;
   }
 }
