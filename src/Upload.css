@@ -121,3 +121,16 @@ input[type='text'] {
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 600px) {
+  /* flip horizonally */
+  .dropHere {
+    width: 80%;
+  }
+  .dropzone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
