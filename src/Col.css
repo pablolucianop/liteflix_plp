@@ -163,16 +163,25 @@
   transition: all 0.5s ease;
   /* background-color: chocolate; */
 }
-/* .playbutton {
-  transition: all 0.3s ease;
-} */
+.playButton {
+  /* background: url('./img/playCircle.svg') no-repeat; */
+  transition: all 0.5s ease;
+}
+.playButton:hover {
+  /* scale: 0.6; */
+  /* background: url('./img/playHover.svg') no-repeat;
+  background-size: contain; */
+}
 
 .movie:hover {
   display: flex;
 }
+.movie:hover {
+  display: flex;
+}
 
-.movie:hover .futureTag {
-  height: 10%;
+.movie:hover .playButton {
+  scale: 0.8;
 }
 .movie:hover .title {
   text-align: left;
