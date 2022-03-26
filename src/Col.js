@@ -64,7 +64,7 @@ function Col({
       <div
         className="col_header"
         onClick={() => {
-          setFocus('col options')
+          focus !== 'col options' ? setFocus('col options') : setFocus('home')
         }}
       >
         <div className="light">ver:</div>
