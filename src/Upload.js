@@ -4,7 +4,7 @@ import clip from './img/clip.svg'
 import close from './img/close.svg'
 import './Upload.css'
 
-function Upload({ setaddedMovies, addedMovies, setFocus }) {
+function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
   const [name, setName] = useState('')
   const [files, setFiles] = useState([])
   const [uploadedMovies, setUploadedMovies] = useState([])
@@ -78,7 +78,10 @@ function Upload({ setaddedMovies, addedMovies, setFocus }) {
           onChange={(e) => setName(e.target.value)}
         />
       </label>
-      <div className="upload-button" onClick={handleSubmit}>
+      <div
+        className="upload-button"
+        onClick={(handleSubmit, setColContent('mis peliculas'))}
+      >
         subir Película
       </div>
       <div

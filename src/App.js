@@ -81,6 +81,7 @@ function App() {
           setaddedMovies={setaddedMovies}
           addedMovies={addedMovies}
           setFocus={setFocus}
+          setColContent={setColContent}
         />
       )}
       {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
