@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
   height: 440px;
-  width: clamp(440px, auto, 440px);
+  width: 730px;
   background-color: var(--colorDark);
   z-index: 1;
 }
@@ -126,7 +126,7 @@ input[type='text'] {
   font-size: 16px;
   background-color: transparent;
   color: #ffffff;
-  height: clamp(56px, 20.49vh, 191px);
+  height: 50%;
   display: inline-block;
   flex-direction: row;
   align-content: center;

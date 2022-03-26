@@ -94,7 +94,6 @@ function Col({
                     : `${gradient}url(${baseURL}${movie.backdrop_path})`,
               }}
             >
-              <div className="opaque"></div>
               <div className="movieInner">
                 {' '}
                 <div className="futureTag"></div>
