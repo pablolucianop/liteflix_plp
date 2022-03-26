@@ -4,9 +4,11 @@ import plusHvyTransImg from './img/plusHvyTrans.svg'
 import close from './img/close.svg'
 import { sidebarData } from './sidebarData'
 
-import { Spring } from 'react-spring'
-
 function Sidebar(props) {
+  function manageClicks(Link, colContent) {
+    colContent !== undefined && props.setColContent(colContent)
+    props.setFocus(Link)
+  }
   return (
     //spring animation appear from the right
 
@@ -27,7 +29,7 @@ function Sidebar(props) {
               className="sidebarItem"
               key={key}
               onClick={() => {
-                props.setFocus(val.link)
+                manageClicks(val.link, val.colContent)
               }}
             >
               {val.icon && (

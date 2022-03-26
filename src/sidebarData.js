@@ -18,10 +18,12 @@ export const sidebarData = [
   {
     title: 'populares',
     link: 'home',
+    colContent: 'populares',
   },
   {
     title: 'mis películas',
     link: 'home',
+    colContent: 'mis peliculas',
   },
   {
     title: 'mi lista',
@@ -31,6 +33,7 @@ export const sidebarData = [
     title: 'agregar película',
     link: 'upload',
     icon: 'plusHvyTransImg',
+    ranck: 'special',
   },
   {
     title: 'cerrar sesión',

@@ -105,7 +105,11 @@ function App() {
         minWidthReached={minWidthReached}
       />
       {focus === 'sidebar' && (
-        <Sidebar setFocus={setFocus} colContent={colContent} />
+        <Sidebar
+          setFocus={setFocus}
+          colContent={colContent}
+          setColContent={setColContent}
+        />
       )}
     </div>
   )

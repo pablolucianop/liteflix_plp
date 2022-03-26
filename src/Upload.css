@@ -37,10 +37,11 @@
   height: 100px;
   width: 602px;
   border: 1px dashed #ffffff;
+  transition: ease-in-out 0.2s;
 }
 
-.dropzone:hover {
-  background-color: aliceblue;
+.dropHere:hover {
+  background-color: rgb(57, 57, 57);
 }
 .closeBtn {
   width: 15px;
