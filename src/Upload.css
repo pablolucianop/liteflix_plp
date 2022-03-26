@@ -39,6 +39,27 @@
   border: 1px dashed #ffffff;
   transition: ease-in-out 0.2s;
 }
+.statusUpload {
+  margin-right: auto;
+}
+.progressBar {
+  background-color: var(--colorAccent);
+  height: 3px;
+  width: 100%;
+}
+.auxBtn {
+  margin-left: auto;
+}
+
+.uploading {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+  width: 602px;
+}
 
 .dropHere:hover {
   background-color: rgb(57, 57, 57);
@@ -52,7 +73,7 @@
 }
 
 .upload-button {
-  margin-top: 40px;
+  margin-top: 24px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -93,7 +114,6 @@
 input[type='text'] {
   font-size: 16px;
   font-family: BebasNeue, sans-serif;
-  margin-top: 62px;
 }
 
 .minimal-input {
@@ -106,6 +126,11 @@ input[type='text'] {
   font-size: 16px;
   background-color: transparent;
   color: #ffffff;
+  height: clamp(56px, 20.49vh, 191px);
+  display: inline-block;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
 }
 .button-container {
   padding-top: 35px;
@@ -148,6 +173,10 @@ input[type='text'] {
   .dropHere {
     width: 80%;
   }
+  .uploading {
+    width: 80%;
+  }
+
   .dropzone {
     display: flex;
     flex-direction: column;

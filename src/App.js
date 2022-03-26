@@ -9,7 +9,6 @@ import Sidebar from './Sidebar'
 // import Anim from './Anim'
 import './fonts.css'
 import Upload from './Upload'
-import { Spring } from 'react-spring'
 
 function App() {
   const [popMovies, setMovies] = useState([])
@@ -17,14 +16,7 @@ function App() {
   const [colContent, setColContent] = useState('populares')
   const [minWidthReached, setminWidthReached] = useState(false)
   const [focus, setFocus] = useState('home')
-  const [addedMovies, setaddedMovies] = useState([
-    // {
-    //   title: 'click aqui para añadir una película',
-    //   id: '',
-    //   poster_path: '',
-    //   backdrop_path: '',
-    // },
-  ])
+  const [addedMovies, setaddedMovies] = useState([])
   const breakingPointPixelsNumber = 600
 
   function handleResize() {
@@ -56,15 +48,12 @@ function App() {
   return (
     <div className="app">
       <div className="content">
-        {/* <BreakingPoint setminWidthReached={setminWidthReached} /> */}
-        {/* <Anim /> */}
         <Banner
           movie={featMovie[0]}
           setColContent={setColContent}
           minWidthReached={minWidthReached}
           setFocus={setFocus}
         />
-
         <Col
           title={colContent}
           popMovies={popMovies}
@@ -75,7 +64,6 @@ function App() {
           focus={focus}
         />
       </div>
-
       {focus === 'upload' && (
         <Upload
           setaddedMovies={setaddedMovies}
@@ -85,13 +73,6 @@ function App() {
           minWidthReached={minWidthReached}
         />
       )}
-      {/* <Col title='populares' fetchUrl={apiRequests.fetchPopMovies} /> */}
-      {/* {console.log('info', info)} */}
-
-      {/* <Col title='mi lista' movies={addedMovies} /> */}
-      {/* <Col title='mis películas' fetchUrl={indo} /> */}
-      {/* <Upload  setaddedMovies={setaddedMovies} xxy ={addedMovies} /> */}
-      {/* <ColOptions setColContent={setColContent} colContent={colContent} /> */}
       {focus === 'sidebar' && (
         <NavBar
           setFocus={setFocus}

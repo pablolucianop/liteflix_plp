@@ -65,10 +65,10 @@ function Upload({
   )
 
   const loaded = (
-    <div>
-      <div> 100% cargado </div>
-      <div> ---</div>
-      <div> ¡Listo! </div>
+    <div className="uploading">
+      <div className="statusUpload"> 100% cargado </div>
+      <div className="progressBar"> </div>
+      <div className="auxBtn"> ¡Listo! </div>
     </div>
   )
   const closeBtnDiv = (

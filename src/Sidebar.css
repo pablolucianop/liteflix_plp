@@ -74,5 +74,7 @@ body {
 @media screen and (max-width: 728px) {
   .sidebar {
     width: 100vw;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
