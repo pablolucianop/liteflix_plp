@@ -4,7 +4,13 @@ import clip from './img/clip.svg'
 import close from './img/close.svg'
 import './Upload.css'
 
-function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
+function Upload({
+  setaddedMovies,
+  addedMovies,
+  setFocus,
+  setColContent,
+  minWidthReached,
+}) {
   const [name, setName] = useState('')
   const [files, setFiles] = useState([])
   const [uploadedMovies, setUploadedMovies] = useState([])
@@ -65,19 +71,30 @@ function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
       <div> ¡Listo! </div>
     </div>
   )
-
+  const closeBtnDiv = (
+    <img
+      className="closeBtn"
+      src={close}
+      alt="close"
+      onClick={() => {
+        // alert('close')
+        setFocus('home')
+      }}
+    ></img>
+  )
+  const exitMinWidthBtnDiv = (
+    <div
+      className=" upload-button exit"
+      onClick={() => {
+        setFocus('home')
+      }}
+    >
+      salir
+    </div>
+  )
   return (
     <div className="upload">
-      <img
-        className="closeBtn"
-        src={close}
-        alt="close"
-        onClick={() => {
-          // alert('close')
-          setFocus('home')
-        }}
-      ></img>
-
+      {!minWidthReached && closeBtnDiv}
       <div className="uploaderTitle">Agregá un archivo</div>
 
       <form></form>
@@ -103,15 +120,7 @@ function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
       >
         subir Película
       </div>
-      <div
-        className=" upload-button exit"
-        onClick={() => {
-          setFocus('home')
-        }}
-      >
-        salir
-      </div>
-
+      {minWidthReached && exitMinWidthBtnDiv}
       {/* <div className="previews">
         {files.map((file) => (
           <div className="preview" key={file.name}>
