@@ -13,7 +13,7 @@ function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
     event.preventDefault()
     let actual = {
       title: name,
-      backdrop_path: files[0].preview,
+      backdrop_path: files[files.length - 1].preview,
       id: 'uploaded' + uploadedMovies.length,
     }
     setUploadedMovies([...uploadedMovies, actual])
@@ -43,6 +43,29 @@ function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
     </div>
   ))
 
+  const dropZoneDivs = (
+    <div className="dropzone" {...getRootProps()}>
+      <input {...getInputProps()} />
+      {
+        // isDragActive ?
+        <div className="dropHere">
+          <img className="notification" src={clip} alt="notification"></img>
+          Agregá un archivo o arrastralo y soltalo aquí
+        </div>
+        // :
+        // <p>Arrastra las imágenes aquí o haz click para seleccionar</p>
+      }
+    </div>
+  )
+
+  const loaded = (
+    <div>
+      <div> 100% cargado </div>
+      <div> ---</div>
+      <div> ¡Listo! </div>
+    </div>
+  )
+
   return (
     <div className="upload">
       <img
@@ -58,20 +81,9 @@ function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
       <div className="uploaderTitle">Agregá un archivo</div>
 
       <form></form>
-      <div className="dropzone" {...getRootProps()}>
-        <input {...getInputProps()} />
-        {
-          // isDragActive ?
-          <div className="dropHere">
-            <img className="notification" src={clip} alt="notification"></img>
-            Agregá un archivo o arrastralo y soltalo aquí
-          </div>
-          // :
-          // <p>Arrastra las imágenes aquí o haz click para seleccionar</p>
-        }
-      </div>
+      {files.length > 0 ? loaded : dropZoneDivs}
       <label>
-        <input
+        <inputs
           className="minimal-input"
           type="text"
           value={name}
