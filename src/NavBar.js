@@ -92,7 +92,7 @@ function NavBar({ setFocus, focus, minWidthReached, overSidebar }) {
       }}
     >
       {desktop ? desktopNav : mobileNav}
-      <div className="gradient"></div>
+      {/* <div className="gradient"></div> */}
     </div>
   )
 }
