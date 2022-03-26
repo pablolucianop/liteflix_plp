@@ -29,6 +29,16 @@ li {
   right: 24px;
 }
 
+.square {
+  height: 12px;
+  width: 12px;
+  background-color: rgb(24, 24, 24);
+  transform: rotate(45deg);
+  position: absolute;
+  top: -5px;
+  right: 42px;
+}
+
 @media screen and (max-width: 600px) {
   .colOptions {
     position: fixed;
@@ -36,5 +46,9 @@ li {
     width: 100vw;
     bottom: 0px;
     top: auto;
+  }
+
+  .square {
+    display: none;
   }
 }
