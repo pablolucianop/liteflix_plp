@@ -78,10 +78,7 @@ function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
           onChange={(e) => setName(e.target.value)}
         />
       </label>
-      <div
-        className="upload-button"
-        onClick={(handleSubmit, setColContent('mis peliculas'))}
-      >
+      <div className="upload-button" onClick={handleSubmit}>
         subir Película
       </div>
       <div
@@ -92,7 +89,7 @@ function Upload({ setaddedMovies, addedMovies, setFocus, setColContent }) {
       >
         salir
       </div>
-      {/* <div className="salir">salir</div> */}
+      {console.log('files', files)}
 
       {/* <div className="previews">
         {files.map((file) => (
