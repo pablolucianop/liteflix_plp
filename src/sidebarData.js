@@ -33,7 +33,7 @@ export const sidebarData = [
     title: 'agregar película',
     link: 'upload',
     icon: 'plusHvyTransImg',
-    ranck: 'special',
+    special: true,
   },
   {
     title: 'cerrar sesión',

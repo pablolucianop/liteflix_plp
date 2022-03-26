@@ -23,8 +23,22 @@ function Sidebar(props) {
       ></img>
       <ul className="sidebarList">
         {sidebarData.map((val, key) => {
-          return (
-            // {nav.var}
+          return val.special ? (
+            <li
+              className="sidebarItem special"
+              key={key}
+              onClick={() => {
+                manageClicks(val.link, val.colContent)
+              }}
+            >
+              <img
+                className="sidebarItemIcon"
+                src={plusHvyTransImg}
+                alt="Agregar película"
+              />
+              {val.title}
+            </li>
+          ) : (
             <li
               className="sidebarItem"
               key={key}
@@ -32,14 +46,7 @@ function Sidebar(props) {
                 manageClicks(val.link, val.colContent)
               }}
             >
-              {val.icon && (
-                <img
-                  className="sidebarItemIcon"
-                  src={plusHvyTransImg}
-                  alt="Agregar película"
-                />
-              )}
-              {val.icon ? <b>{val.title}</b> : val.title}
+              {val.title}
             </li>
           )
         })}

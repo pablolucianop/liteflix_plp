@@ -52,6 +52,11 @@ body {
   padding-right: 6px;
 }
 
+.special {
+  font-weight: 700;
+  height: clamp(5px, 20.493vh, 191px);
+}
+
 .sidebarItem:hover {
   cursor: pointer;
   /* background-color: darkslategray; */
@@ -59,9 +64,6 @@ body {
 
 .sidebarItemIcon {
   margin-right: 16px;
-  padding-top: clamp(5px, 7.725vh, 72px);
-  padding-bottom: clamp(5px, 7.725vh, 72px);
-  height: clamp(5px, 13.519vh, 126px);
 }
 
 .sidebarClose {
