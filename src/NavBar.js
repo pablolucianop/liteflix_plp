@@ -89,10 +89,10 @@ function NavBar({ setFocus, focus, minWidthReached, overSidebar }) {
       className="container"
       onClick={() => {
         // setFocus('home')
-        console.log('clicked nav bar')
       }}
     >
       {desktop ? desktopNav : mobileNav}
+      <div className="gradient"></div>
     </div>
   )
 }
