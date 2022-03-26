@@ -129,6 +129,26 @@
   flex-direction: column;
   justify-content: center;
   /* margin: 10px; */
+  position: relative;
+}
+
+.opaque {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  background-color: var(--colorDark);
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  transition: all 0.5s ease-in-out;
 }
 
 .playAndTitle {
@@ -158,6 +178,7 @@
 
   /* width: 88%; */
 }
+
 .title {
   font-size: 16px;
   transition: all 0.5s ease;
@@ -175,6 +196,7 @@
 
 .movie:hover {
   display: flex;
+  opacity: 0.7;
 }
 .movie:hover {
   display: flex;

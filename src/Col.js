@@ -50,6 +50,8 @@ function Col({
   const imgPlayCircle = <img src={playCircle} alt="reproducir película"></img>
   const imgStar = <img className="star" src={star} alt="star"></img>
 
+  function returGradientAndImage(params) {}
+
   return (
     <div className="col">
       {focus === 'col options' && (
@@ -72,7 +74,6 @@ function Col({
         {imgArrow}
       </div>
       <div className="col_movies">
-        {}
         {
           // if there are no movies added, show add movie button
           movies[0] === undefined && (
@@ -93,18 +94,22 @@ function Col({
                     : `${gradient}url(${baseURL}${movie.backdrop_path})`,
               }}
             >
-              <div className="futureTag"></div>
-              <div className="playAndTitle">
-                <div className="playButton">{imgPlayCircle}</div>
-                <div className="title"> {movie.title}</div>
-              </div>
-              <div className="ratingAndYear">
-                <div className="rating">
-                  {movie.vote_average && imgStar}
-                  {movie.vote_average}
-                </div>{' '}
-                <div className="year">
-                  {movie.release_date && movie.release_date.slice(0, 4)}
+              <div className="opaque"></div>
+              <div className="movieInner">
+                {' '}
+                <div className="futureTag"></div>
+                <div className="playAndTitle">
+                  <div className="playButton">{imgPlayCircle}</div>
+                  <div className="title"> {movie.title}</div>
+                </div>
+                <div className="ratingAndYear">
+                  <div className="rating">
+                    {movie.vote_average && imgStar}
+                    {movie.vote_average}
+                  </div>{' '}
+                  <div className="year">
+                    {movie.release_date && movie.release_date.slice(0, 4)}
+                  </div>
                 </div>
               </div>
             </div>
