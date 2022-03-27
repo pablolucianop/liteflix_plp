@@ -28,13 +28,9 @@ body {
   letter-spacing: 0.25rem;
   background-color: var(--colorDark);
   overflow: scroll;
-
-  /* line-height: 1.125rem; */
 }
 
 img {
-  /* display: block; */
-  /* width: 100%; */
   max-width: 100%;
 }
 
@@ -68,9 +64,6 @@ h2 {
   background-color: var(--colorDark);
 }
 
-/* p {
-  font-family: -apple-system, BebasNeue-Regular;
-} */
 b {
   font-weight: 700;
 }
@@ -93,7 +86,6 @@ button {
   color: white;
 }
 .content {
-  /* background-color: #102f8a; */
   color: white;
   width: 100%;
   display: -webkit-box;

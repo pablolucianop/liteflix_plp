@@ -39,12 +39,9 @@
   left: 50%;
   transform: translate(-50%, 0%);
   margin: 0;
-  /* background-color: tomato; */
   width: 90%;
   max-height: 30%;
   margin-bottom: 14px;
-  /* justify-content: center;
-  text-align: center; */
 }
 .col_no-movies {
   margin-top: 10px;
@@ -57,8 +54,6 @@
   display: flex;
 
   background-color: rgb(47, 47, 47, 0.8);
-  /* max-width: 327px; */
-  /* border: 1px solid rgb(47, 47, 47); */
   text-align: center;
 }
 .col_header {
@@ -76,10 +71,6 @@
 .extraInfo {
   display: none;
   margin-bottom: auto;
-
-  /* flex-direction: row;
-  align-items: center;
-  justify-content: space-between; */
 }
 
 .col_movie:hover {
@@ -91,9 +82,6 @@
 .col_movie:hover .title-hover {
   display: flex;
   margin-bottom: auto;
-  /* flex-direction: row; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
 }
 
 .col_movie:hover .extraInfo {
@@ -119,7 +107,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin: 10px; */
   position: relative;
 }
 
@@ -136,7 +123,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin: 10px; */
   position: relative;
 }
 
@@ -163,11 +149,6 @@
   justify-content: center;
   text-align: center;
   height: 100%;
-
-  /* margin-bottom: auto; */
-  /* background-color: burlywood; */
-
-  /* width: 88%; */
 }
 .ratingAndYear {
   display: flex;
@@ -177,17 +158,11 @@
   font-size: 12px;
   transition: all 0.3s ease;
   height: 10%;
-
-  /* background-color: crimson; */
-  /* position: fixed; */
-
-  /* width: 88%; */
 }
 
 .title {
   font-size: 16px;
   transition: all 0.5s ease;
-  /* background-color: chocolate; */
 }
 
 .playButton {
@@ -199,10 +174,6 @@
 }
 
 .playButton:hover {
-  /* width: 40px;
-  height: 40px;
-  width: 24px;
-  height: 24px; */
   background: url('./img/playHover.svg') no-repeat;
   background-size: cover;
   background-color: blue;
@@ -225,7 +196,6 @@
   margin-left: 6px;
 }
 .movie:hover .playAndTitle {
-  /* background-color: rgba(36, 36, 36, 0.7); */
   flex-direction: row;
   justify-content: center;
   align-items: center;
