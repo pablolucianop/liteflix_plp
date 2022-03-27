@@ -101,7 +101,7 @@ function Col({
               <div className="movieInner">
                 <div className="futureTag"></div>
                 <div className="playAndTitle">
-                  <div className="playButton"></div>
+                  <div className="playButton">{imgPlayCircle}</div>
                   <div className="title"> {movie.title}</div>
                 </div>
                 <div className="ratingAndYear">
