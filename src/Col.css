@@ -8,7 +8,7 @@
   /* background-color: tomato; */
   /* desktop */
   height: 95%;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 .col_movies {
   padding-top: 10px;

@@ -27,7 +27,7 @@ body {
   font-size: 1rem;
   letter-spacing: 0.25rem;
   background-color: var(--colorDark);
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 img {
