@@ -5,6 +5,10 @@
   padding-top: 5em;
   position: absolute;
   top: 10px;
+  /* background-color: tomato; */
+  /* desktop */
+  height: 95%;
+  overflow: scroll;
 }
 .col_movies {
   padding-top: 10px;
