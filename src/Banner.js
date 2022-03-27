@@ -9,7 +9,7 @@ function Banner({ movie, setColContent, minWidthReached, setFocus }) {
   const baseURL = `https://image.tmdb.org/t/p/w500/`
 
   const gradientBottom =
-    'linear-gradient(180deg, rgba(36, 36, 36, 0)99%, #242424 100%)'
+    'linear-gradient(180deg, rgba(36, 36, 36, 0) 65%, #242424 100%)'
   const gradientTop =
     'linear-gradient(0deg, rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 105.69%)'
   const gradient = minWidthReached ? gradientBottom : gradientTop
