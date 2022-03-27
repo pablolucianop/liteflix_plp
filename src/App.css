@@ -27,7 +27,7 @@ body {
   font-size: 1rem;
   letter-spacing: 0.25rem;
   background-color: var(--colorDark);
-  overflow: hidden;
+  overflow: scroll;
 
   /* line-height: 1.125rem; */
 }

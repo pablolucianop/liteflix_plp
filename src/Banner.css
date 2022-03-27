@@ -102,6 +102,7 @@
   .banner {
     min-height: 562px;
     background-size: 10%;
+    background-position: center center;
 
     /* background-size: 20%; */
   }

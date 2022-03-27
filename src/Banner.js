@@ -13,7 +13,8 @@ function Banner({ movie, setColContent, minWidthReached, setFocus }) {
   const gradientTop =
     'linear-gradient(0deg, rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 105.69%)'
   const gradient = minWidthReached ? gradientBottom : gradientTop
-  // console.log('minWidthReached', minWidthReached)
+
+  const positionBackground = minWidthReached ? 'center' : 'right'
 
   return (
     <header
@@ -22,7 +23,7 @@ function Banner({ movie, setColContent, minWidthReached, setFocus }) {
         backgroundImage: `${gradient} , url(${baseURL}${movie.backdrop_path})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right',
+        backgroundPosition: positionBackground,
       }}
       //to let navigate until clickaway function is working
       onClick={() => {
