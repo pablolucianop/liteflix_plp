@@ -25,6 +25,7 @@
   background-color: var(--colorDark);
   z-index: 1;
 }
+
 .uploaderTitle {
   color: var(--colorAccent);
   font-size: 20px;
@@ -85,7 +86,17 @@
   border: none;
   font-family: BebasNeue;
   font-size: 18px;
+  background-color: #ffffff;
+  pointer-events: auto;
+  cursor: auto;
 }
+
+.disable {
+  background-color: #919191;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .exit {
   background-color: var(--colorDark);
   border: 1px solid var(--colorBase);

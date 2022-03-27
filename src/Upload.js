@@ -14,9 +14,13 @@ function Upload({
   const [name, setName] = useState('')
   const [files, setFiles] = useState([])
   const [uploadedMovies, setUploadedMovies] = useState([])
+  const [uploadInProgress, setUploadInProgress] = useState(false)
 
   const handleSubmit = (event) => {
     event.preventDefault()
+
+    setUploadInProgress(true)
+
     let actual = {
       title: name,
       backdrop_path: files[files.length - 1].preview,
@@ -71,6 +75,14 @@ function Upload({
       <div className="auxBtn"> ¡Listo! </div>
     </div>
   )
+
+  const congratsLoading = (
+    <div className="uploading">
+      <div className="statusUpload"> 100% cargado </div>
+      <div className="progressBar"> </div>
+      <div className="auxBtn"> ¡Listo! </div>
+    </div>
+  )
   const closeBtnDiv = (
     <img
       className="closeBtn"
@@ -92,11 +104,25 @@ function Upload({
       salir
     </div>
   )
+  const uploadMovieButton = (
+    <div
+      className={files.length > 0 ? 'upload-button' : 'upload-button disable'}
+      onClick={handleSubmit}
+    >
+      subir película
+    </div>
+  )
+
+  const goHomeButton = (
+    <div className="upload-button" onClick={''}>
+      ir a home
+    </div>
+  )
+
   return (
     <div className="upload">
       {!minWidthReached && closeBtnDiv}
       <div className="uploaderTitle">Agregá un archivo</div>
-
       <form></form>
       {files.length > 0 ? loaded : dropZoneDivs}
       <label>
@@ -109,17 +135,7 @@ function Upload({
         />
       </label>
       {console.log('files', files, files.length)}
-      <div
-        className="upload-button"
-        onClick={handleSubmit}
-        style={{
-          backgroundColor: files.length > 0 ? '#ffffff' : '#919191',
-          pointerEvents: files.length > 0 ? 'auto' : 'none',
-          cursor: files.length > 0 ? 'auto' : 'default',
-        }}
-      >
-        subir Película
-      </div>
+      {uploadInProgress ? goHomeButton : uploadMovieButton}
       {minWidthReached && exitMinWidthBtnDiv}
       {/* <div className="previews">
         {files.map((file) => (
