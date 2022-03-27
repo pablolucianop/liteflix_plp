@@ -16,19 +16,24 @@ function Upload({
   const [uploadedMovies, setUploadedMovies] = useState([])
   const [uploadInProgress, setUploadInProgress] = useState(false)
 
+  const handleExit = () => {
+    setFocus('home')
+    setColContent('mis peliculas')
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
-
-    setUploadInProgress(true)
 
     let actual = {
       title: name,
       backdrop_path: files[files.length - 1].preview,
       id: 'uploaded' + uploadedMovies.length,
     }
+    setUploadInProgress(true)
+    console.log('uploadInProgress', uploadInProgress)
     setUploadedMovies([...uploadedMovies, actual])
     setaddedMovies([...addedMovies, actual])
-    console.log('uploadedMovies', actual)
+    console.log('actual', actual)
     console.log('uploadedMovies', uploadedMovies)
   }
 
@@ -98,7 +103,7 @@ function Upload({
     <div
       className=" upload-button exit"
       onClick={() => {
-        setFocus('home')
+        handleExit()
       }}
     >
       salir
@@ -114,7 +119,7 @@ function Upload({
   )
 
   const goHomeButton = (
-    <div className="upload-button" onClick={''}>
+    <div className="upload-button" onClick={handleExit}>
       ir a home
     </div>
   )
