@@ -49,12 +49,14 @@ function App() {
   return (
     <div className="app">
       <div className="content">
+        {/* Banner with feature movie */}
         <Banner
           movie={featMovie[0]}
           setColContent={setColContent}
           minWidthReached={minWidthReached}
           setFocus={setFocus}
         />
+        {/* column of the movies */}
         <Col
           title={colContent}
           popMovies={popMovies}
@@ -65,6 +67,7 @@ function App() {
           focus={focus}
         />
       </div>
+      {/*upload section */}
       {focus === 'upload' && (
         <Upload
           setaddedMovies={setaddedMovies}
@@ -91,6 +94,7 @@ function App() {
         minWidthReached={minWidthReached}
       />
       {focus === 'sidebar' && (
+        //just the sidebar!
         <Sidebar
           setFocus={setFocus}
           colContent={colContent}
