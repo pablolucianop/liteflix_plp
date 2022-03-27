@@ -100,8 +100,8 @@ function Upload({
       <form></form>
       {files.length > 0 ? loaded : dropZoneDivs}
       <label>
-        <inputs
-          className="minimal-input"
+        <input
+          className="minimal-input-title"
           type="text"
           value={name}
           placeholder="Título"

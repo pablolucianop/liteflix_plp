@@ -92,6 +92,13 @@
   color: var(--colorBase);
 }
 
+/* ////////////////////////////////////////////////////////// */
+
+.minimal-input-title {
+}
+
+/* ////////////////////////////////////////////////////////////// */
+
 .minimal-input {
   -webkit-transition: all 125ms ease-out 125ms;
   -moz-transition: all 125ms ease-out 125ms;
@@ -114,6 +121,7 @@
 input[type='text'] {
   font-size: 16px;
   font-family: BebasNeue, sans-serif;
+  margin-top: 62px;
 }
 
 .minimal-input {
@@ -126,11 +134,6 @@ input[type='text'] {
   font-size: 16px;
   background-color: transparent;
   color: #ffffff;
-  height: 50%;
-  display: inline-block;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
 }
 .button-container {
   padding-top: 35px;
