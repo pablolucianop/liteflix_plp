@@ -183,7 +183,6 @@ input:focus::placeholder {
 }
 
 @media screen and (max-width: 600px) {
-  /* flip horizonally */
   .upload {
     height: 100%;
     top: auto;

@@ -168,15 +168,19 @@
 .playButton {
   width: 40px;
   height: 40px;
+  margin-right: 16px;
   background: url('./img/playCircle.svg') no-repeat;
   transition: all 0.5s ease;
   background-color: rgb(104, 184, 96);
 }
 
 .playButton:hover {
+  width: 40px;
+  height: 40px;
+
   background: url('./img/playHover.svg') no-repeat;
   background-size: cover;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .movie:hover {
@@ -188,8 +192,8 @@
 }
 
 .movie:hover .playButton {
-  width: 24px;
-  height: 24px;
+  /* width: 24px;
+  height: 24px; */
 }
 .movie:hover .title {
   text-align: left;
@@ -197,7 +201,7 @@
 }
 .movie:hover .playAndTitle {
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   height: 100%;
 }
