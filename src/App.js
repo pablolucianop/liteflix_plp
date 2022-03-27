@@ -6,7 +6,6 @@ import apiRequests from './apiRequests'
 import Banner from './Banner'
 import NavBar from './NavBar'
 import Sidebar from './Sidebar'
-// import Anim from './Anim'
 import './fonts.css'
 import Upload from './Upload'
 
@@ -19,6 +18,7 @@ function App() {
   const [addedMovies, setaddedMovies] = useState([])
   const breakingPointPixelsNumber = 600
 
+  //set up breaking point if the width of the window is less than 600px
   function handleResize() {
     setminWidthReached(window.innerWidth < breakingPointPixelsNumber)
   }
@@ -28,6 +28,7 @@ function App() {
     handleResize()
 
     async function fetchData() {
+      //get the movies from the api
       const requestPopMovies = await axios.get(apiRequests.fetchPopMovies)
       const requestFeatMovie = await axios.get(apiRequests.fetchFeatMovie)
 
@@ -73,14 +74,17 @@ function App() {
           minWidthReached={minWidthReached}
         />
       )}
-      {focus === 'sidebar' && (
-        <NavBar
-          setFocus={setFocus}
-          focus={focus}
-          minWidthReached={minWidthReached}
-          overSidebar={true}
-        />
-      )}
+      {
+        //two versions of the same navbar, to deal with complex interaction with sidebar
+        focus === 'sidebar' && (
+          <NavBar
+            setFocus={setFocus}
+            focus={focus}
+            minWidthReached={minWidthReached}
+            overSidebar={true}
+          />
+        )
+      }
       <NavBar
         setFocus={setFocus}
         focus={focus}

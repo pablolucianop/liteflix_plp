@@ -25,7 +25,7 @@ function Banner({ movie, setColContent, minWidthReached, setFocus }) {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: positionBackground,
       }}
-      //to let navigate until clickaway function is working
+      //to allow navigation in this stage
       onClick={() => {
         setFocus('home')
       }}
@@ -34,7 +34,6 @@ function Banner({ movie, setColContent, minWidthReached, setFocus }) {
         className="container"
         onClick={() => {
           setFocus('home')
-          // console.log('clicked')
         }}
       >
         <div className="banner_content">

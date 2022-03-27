@@ -7,8 +7,6 @@ import arrow from './img/arrow.svg'
 import ColOptions from './ColOptions'
 import plusHvyTransImg from './img/plusHvyTrans.svg'
 
-// import { info } from './info'
-
 function Col({
   title,
   popMovies,
@@ -18,8 +16,13 @@ function Col({
   setFocus,
   focus,
 }) {
+  //select the movies to show in the col
   const numberOfMoviesToShow = 4
+
+  //base url to get the poster image
   const baseURL = `https://image.tmdb.org/t/p/w500/`
+
+  //subtle gradient for the background of every movie in the col
   const gradient =
     'linear-gradient(180deg, rgba(0, 0, 0, 0) 50.78%, #000000 122.69%),'
   let movies = popMovies
@@ -50,8 +53,6 @@ function Col({
   const imgPlayCircle = <img src={playCircle} alt="reproducir película"></img>
   const imgStar = <img className="star" src={star} alt="star"></img>
 
-  function returGradientAndImage(params) {}
-
   return (
     <div className="col">
       {focus === 'col options' && (
@@ -66,6 +67,7 @@ function Col({
       <div
         className="col_header"
         onClick={() => {
+          //if the col options are showing (populares, mis películas), hide them if you reclick on the header
           focus !== 'col options' ? setFocus('col options') : setFocus('home')
         }}
       >
@@ -89,13 +91,14 @@ function Col({
               key={movie.id}
               style={{
                 backgroundImage:
+                  //the movie posters come from different sources, so we need to adapt
+                  //also adding the gradient for the background
                   title === 'mis peliculas'
                     ? `${gradient}url(${movie.backdrop_path})`
                     : `${gradient}url(${baseURL}${movie.backdrop_path})`,
               }}
             >
               <div className="movieInner">
-                {' '}
                 <div className="futureTag"></div>
                 <div className="playAndTitle">
                   <div className="playButton">{imgPlayCircle}</div>
@@ -120,29 +123,3 @@ function Col({
 }
 
 export default Col
-
-// <div
-//   className="col_movie"
-//   key={movie.id}
-//   style={{
-//     backgroundImage:
-//       title === 'mi lista'
-//         ? `${gradient}url(${movie.backdrop_path})`
-//         : `${gradient}url(${baseURL}${movie.backdrop_path})`,
-//   }}
-// >
-//   <div className="central_movie">
-//     {imgPlayCircle}
-//     <div className="title-hover">{movie.title}</div>
-//   </div>
-//   <h3 className="titleMovie light">{movie.title}</h3>
-//   <div className="extraInfo">
-//     {movie.vote_average && (
-//       <div className="average">
-//         {imgStar}
-//         {movie.vote_average}
-//       </div>
-//     )}
-//     {movie.release_date && movie.release_date.slice(0, 4)}
-//   </div>
-// </div>

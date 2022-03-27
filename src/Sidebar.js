@@ -5,13 +5,12 @@ import close from './img/close.svg'
 import { sidebarData } from './sidebarData'
 
 function Sidebar(props) {
+  //gives funcionality to the sidebar. Set what part to show and what column to show
   function manageClicks(Link, colContent) {
     colContent !== undefined && props.setColContent(colContent)
     props.setFocus(Link)
   }
   return (
-    //spring animation appear from the right
-
     <div className="sidebar">
       <img
         onClick={() => {
@@ -23,6 +22,7 @@ function Sidebar(props) {
       ></img>
       <ul className="sidebarList">
         {sidebarData.map((val, key) => {
+          //is the column is special, give more space and style it differently
           return val.special ? (
             <li
               className="sidebarItem special"
@@ -39,6 +39,7 @@ function Sidebar(props) {
               {val.title}
             </li>
           ) : (
+            // if it is not special, just show the title
             <li
               className="sidebarItem"
               key={key}
