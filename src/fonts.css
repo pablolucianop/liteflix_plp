@@ -5,6 +5,14 @@
   font-weight: 200;
 }
 
+@font-face {
+  font-family: 'BebasNeue';
+  src: local('BebasNeue'), url(./fonts/BebasNeue-Bold.otf) format('truetype'),
+    url(./fonts/BebasNeue-Bold.ttf) format('truetype');
+  font-style: bold;
+  font-weight: 700;
+}
+
 /* @font-face {
   font-family: 'BebasNeue';
   src: local('BebasNeue'), url(./fonts/BebasNeue.woff) format('woff'),
@@ -13,11 +21,3 @@
   font-style: bold;
   font-weight: 700;
 } */
-
-@font-face {
-  font-family: 'BebasNeue';
-  src: local('BebasNeue'), url(./fonts/BebasNeue-Bold.otf) format('truetype'),
-    url(./fonts/BebasNeue-Bold.ttf) format('truetype');
-  font-style: bold;
-  font-weight: 700;
-}

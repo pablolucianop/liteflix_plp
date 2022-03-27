@@ -59,7 +59,6 @@ body {
 
 .sidebarItem:hover {
   cursor: pointer;
-  /* background-color: darkslategray; */
 }
 
 .sidebarItemIcon {
@@ -69,7 +68,6 @@ body {
 .sidebarClose {
   position: absolute;
   top: 43.09px;
-  /* right: 24.8px; */
   z-index: 10;
 }
 

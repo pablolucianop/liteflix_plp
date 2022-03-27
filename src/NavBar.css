@@ -9,7 +9,6 @@
   margin-top: 28px;
   z-index: 5;
   pointer-events: none;
-  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .navBarOver {
@@ -23,14 +22,12 @@
   margin-top: 28px;
   z-index: 115;
   pointer-events: none;
-  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 .navbar_right {
   display: flex;
   flex-direction: row;
   align-items: center;
   pointer-events: auto;
-  /* justify-content: space-between; */
 }
 
 .navbar_left {
@@ -38,7 +35,6 @@
   flex-direction: row;
   align-items: center;
   pointer-events: auto;
-  /* justify-content: space-between; */
 }
 
 .hamburger {
@@ -91,7 +87,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  /* flip horizonally */
   .hamburger {
     transform: scaleX(-1);
   }
