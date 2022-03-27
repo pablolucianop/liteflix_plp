@@ -1,12 +1,6 @@
 .col {
-  /* margin: 20px; */
   color: #ffffff;
   margin-right: 7.225%;
-
-  /* color: var(--color2); */
-  /* background-color: firebrick; */
-  /* width: 200px; */
-  /* min-width: 200px; */
   width: 220px;
   padding-top: 5em;
   position: absolute;
@@ -22,11 +16,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* background-size: auto; */
   border-radius: 4px;
   background-color: rgb(47, 47, 47);
-  /* max-width: 327px; */
-  /* border: 1px solid rgb(47, 47, 47); */
   text-align: center;
   position: relative;
 }
@@ -198,14 +189,23 @@
   transition: all 0.5s ease;
   /* background-color: chocolate; */
 }
+
 .playButton {
-  /* background: url('./img/playCircle.svg') no-repeat; */
+  width: 40px;
+  height: 40px;
+  background: url('./img/playCircle.svg') no-repeat;
   transition: all 0.5s ease;
+  background-color: rgb(104, 184, 96);
 }
+
 .playButton:hover {
-  /* scale: 0.6; */
-  /* background: url('./img/playHover.svg') no-repeat;
-  background-size: contain; */
+  /* width: 40px;
+  height: 40px;
+  width: 24px;
+  height: 24px; */
+  background: url('./img/playHover.svg') no-repeat;
+  background-size: cover;
+  background-color: blue;
 }
 
 .movie:hover {
@@ -217,7 +217,8 @@
 }
 
 .movie:hover .playButton {
-  scale: 0.8;
+  width: 24px;
+  height: 24px;
 }
 .movie:hover .title {
   text-align: left;
