@@ -19,6 +19,7 @@ function Upload({
   const handleExit = () => {
     setFocus('home')
     setColContent('mis peliculas')
+    setUploadInProgress(false)
   }
 
   const handleSubmit = (event) => {

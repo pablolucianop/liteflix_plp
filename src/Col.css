@@ -245,6 +245,12 @@
     min-height: 146px;
     height: 38.9333vw;
   }
+  .movieInner {
+    width: auto;
+    min-height: 146px;
+    height: 38.9333vw;
+  }
+
   .col {
     width: 93.16vw;
     margin-left: 2%;
