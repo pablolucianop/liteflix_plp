@@ -38,6 +38,7 @@ function Banner({ movie, setColContent, minWidthReached, setFocus }) {
         }}
       >
         <div className="banner_content">
+          <div className="fill"></div>
           <div className="tagline">
             original de <b>liteflix</b>
           </div>

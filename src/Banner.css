@@ -94,7 +94,9 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     /* padding-top: 0%; */
+    margin-bottom: auto;
   }
   .banner_buttons {
     flex-direction: column;
@@ -105,5 +107,8 @@
     background-position: center center;
 
     /* background-size: 20%; */
+  }
+  .fill {
+    flex-grow: 1;
   }
 }
