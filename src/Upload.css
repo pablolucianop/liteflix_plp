@@ -95,9 +95,24 @@
 /* ////////////////////////////////////////////////////////// */
 
 .minimal-input-title {
+  border: 0;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  width: 248px;
+  text-align: center;
+  font-family: 'BebasNeue-Regular', sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 /* ////////////////////////////////////////////////////////////// */
+
+input[type='text'] {
+  font-size: 16px;
+  font-family: BebasNeue, sans-serif;
+  margin-top: 62px;
+}
 
 .minimal-input {
   -webkit-transition: all 125ms ease-out 125ms;
@@ -116,12 +131,6 @@
 }
 .minimal-input:-ms-input-placeholder {
   color: #ffffff;
-}
-
-input[type='text'] {
-  font-size: 16px;
-  font-family: BebasNeue, sans-serif;
-  margin-top: 62px;
 }
 
 .minimal-input {
